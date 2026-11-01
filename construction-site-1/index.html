@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VANGUARD Civil & Infrastructure | General Contractors & Structural Engineering</title>
+  <meta name="description" content="VANGUARD is a premier general contracting and structural civil engineering firm specializing in turnkey residential estates, commercial hubs, and industrial developments.">
+  <link rel="canonical" href="https://bestminders.github.io/construction-site-1/">
+  
+  <!-- Architectural Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stone: {
+              50: '#fafaf9',
+              100: '#f5f5f4',
+              200: '#e7e5e4',
+              300: '#d6d3d1',
+              400: '#a8a29e',
+              500: '#78716c',
+              600: '#57534e',
+              700: '#44403c',
+              800: '#292524',
+              900: '#1c1917',
+              950: '#0c0a09'
+            },
+            ochre: {
+              DEFAULT: '#c2410c',
+              dark: '#9a3412',
+              light: '#ea580c'
+            }
+          },
+          fontFamily: {
+            title: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hairline-b { border-bottom: 1px solid #e7e5e4; }
+    .hairline-t { border-top: 1px solid #e7e5e4; }
+    .hairline-r { border-right: 1px solid #e7e5e4; }
+    .hairline-l { border-left: 1px solid #e7e5e4; }
+    .blueprint-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#fafaf9] text-stone-900 font-sans antialiased selection:bg-stone-900 selection:text-white">
+
+  <!-- Top Best Minders Showcase Sticky Bar -->
+  <aside aria-label="Demo notice" class="bg-stone-950 text-stone-300 py-2.5 px-4 text-xs font-medium sticky top-0 z-50 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span><strong>Live Showcase:</strong> Classic Architectural & Construction Firm Template by <strong>Best Minders</strong></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://bestminders.github.io/" class="text-stone-400 hover:text-white underline text-[11px] font-semibold">Back to All Demos</a>
+        <a href="https://wa.me/918140557546?text=Hi%20Best%20Minders,%20I%20love%20the%20VANGUARD%20Construction%20Demo.%20I%20want%20a%20website%20like%20this%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="bg-ochre hover:bg-ochre-light text-white px-3.5 py-1 rounded-md text-[11px] font-bold transition-colors">
+          Get This Site for Your Company &rarr;
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Firm Navigation Bar -->
+  <header class="bg-[#fafaf9]/95 backdrop-blur-md sticky top-[41px] z-40 hairline-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 bg-stone-900 text-white flex items-center justify-center font-title font-bold text-lg tracking-tighter">
+          VG
+        </div>
+        <div>
+          <span class="font-title text-xl font-bold tracking-tight text-stone-950 block leading-tight">VANGUARD</span>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-stone-500 font-semibold block">Civil & Infrastructure</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold tracking-wider uppercase text-stone-700">
+        <a href="#projects" class="hover:text-ochre transition-colors">Projects</a>
+        <a href="#capabilities" class="hover:text-ochre transition-colors">Capabilities</a>
+        <a href="#estimator" class="hover:text-ochre transition-colors text-ochre font-bold">Scope & Estimator</a>
+        <a href="#standards" class="hover:text-ochre transition-colors">Engineering Standards</a>
+        <a href="#about" class="hover:text-ochre transition-colors">Firm Profile</a>
+      </nav>
+
+      <!-- Direct Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="tel:+918140557546" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-stone-700 hover:text-stone-950">
+          <span>T: +91 81405 57546</span>
+        </a>
+        <a href="#contact" class="px-5 py-2.5 rounded-sm bg-stone-950 hover:bg-stone-800 text-white font-semibold text-xs tracking-wider uppercase transition-colors">
+          Request Tender / Quote
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-stone-950 text-white overflow-hidden py-16 sm:py-20">
+    <!-- Authentic Construction Site Imagery Background -->
+    <div class="absolute inset-0 opacity-25 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb18615f8?auto=format&fit=crop&w=2000&q=85');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/90 to-stone-950/40"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl space-y-8">
+        
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 bg-stone-900 border border-stone-800 text-stone-300 text-xs font-mono uppercase tracking-widest">
+          <span class="w-2 h-2 bg-ochre inline-block"></span>
+          <span>General Contractors & Civil Engineers</span>
+        </div>
+
+        <h1 class="font-title text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.08]">
+          STRUCTURAL INTEGRITY.<br>
+          <span class="text-stone-400 font-normal">TIMELESS ARCHITECTURE.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-stone-300 font-normal leading-relaxed max-w-2xl">
+          We plan, engineer, and construct benchmark commercial towers, private estates, and industrial facilities. Built on strict safety standards, verified materials, and zero delivery delays.
+        </p>
+
+        <!-- Cohesive Matched Action Buttons -->
+        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a href="#projects" class="px-8 py-4 bg-ochre hover:bg-ochre-light text-white font-title font-bold text-xs uppercase tracking-widest text-center transition-all shadow-lg hover:shadow-orange-900/30">
+            View Landmark Projects
+          </a>
+          <a href="#estimator" class="px-8 py-4 bg-stone-900 hover:bg-stone-800 border border-stone-600 hover:border-stone-400 text-stone-100 font-title font-semibold text-xs uppercase tracking-widest text-center transition-all">
+            Calculate Project Scope
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Credibility & Operational Stats Strip with Dynamic Count-Up -->
+    <div id="stats-section" class="mt-20 hairline-t border-stone-800 bg-stone-900/90 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+        
+        <div class="border-l-2 border-ochre pl-4">
+          <div class="font-title text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <span class="counter-num" data-target="2.8" data-decimals="1" data-suffix="M+">0.0M+</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider text-stone-300 font-semibold mt-2">Sq. Ft Constructed</div>
+        </div>
+
+        <div class="border-l-2 border-stone-700 pl-4">
+          <div class="font-title text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <span class="counter-num" data-target="18" data-decimals="0" data-suffix="+">0+</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider text-stone-300 font-semibold mt-2">Years Industry Standing</div>
+        </div>
+
+        <div class="border-l-2 border-ochre pl-4">
+          <div class="font-title text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <span class="counter-num" data-target="250" data-decimals="0" data-suffix="+">0+</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider text-stone-300 font-semibold mt-2">Projects Handed Over</div>
+        </div>
+
+        <div class="border-l-2 border-stone-700 pl-4">
+          <div class="font-title text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            <span class="counter-num" data-target="100" data-decimals="0" data-suffix="%">0%</span>
+          </div>
+          <div class="text-xs uppercase tracking-wider text-stone-300 font-semibold mt-2">On-Time Quality Index</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Landmark Projects Portfolio Section -->
+  <section id="projects" class="py-14 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12 hairline-b">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-ochre font-bold">Selected Portfolio</span>
+        <h2 class="font-title text-3xl sm:text-5xl font-bold text-stone-950 mt-2 tracking-tight">
+          Landmark Works Completed
+        </h2>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap gap-2 text-xs font-semibold" id="portfolioFilter">
+        <button onclick="filterPortfolio('all')" class="p-btn active px-4 py-2 bg-stone-950 text-white transition-colors" data-filter="all">All Sectors</button>
+        <button onclick="filterPortfolio('residential')" class="p-btn px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors" data-filter="residential">Residential Estates</button>
+        <button onclick="filterPortfolio('commercial')" class="p-btn px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors" data-filter="commercial">Commercial & Corporate</button>
+        <button onclick="filterPortfolio('infrastructure')" class="p-btn px-4 py-2 bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors" data-filter="infrastructure">Civil & Industrial</button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
+      
+      <!-- Project 1 -->
+      <article class="project-card residential group bg-white border border-stone-200 overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/11] overflow-hidden bg-stone-200 relative">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Villa Monolith" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-3 left-3 bg-stone-950/80 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">Completed 2024</span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-widest text-ochre font-bold">Luxury Private Estate</span>
+            <h3 class="font-title text-xl font-bold text-stone-950 mt-1">Villa Monolith & Grounds</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed font-normal">
+              7,400 sq.ft cantilever concrete architecture with thermal acoustic double glazing and integrated rainwater harvesting.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-3 hairline-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-mono">
+          <span>Area: 7,400 Sq. Ft</span>
+          <span>Timeline: 14 Months</span>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card commercial group bg-white border border-stone-200 overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/11] overflow-hidden bg-stone-200 relative">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80" alt="Apex Tech Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-3 left-3 bg-stone-950/80 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">Completed 2023</span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-widest text-ochre font-bold">Commercial Infrastructure</span>
+            <h3 class="font-title text-xl font-bold text-stone-950 mt-1">Skyline Commercial Hub</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed font-normal">
+              16-floor corporate tower with seismic resistant RCC shear walls, high-efficiency MEP engineering, and LEED Gold specifications.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-3 hairline-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-mono">
+          <span>Area: 185,000 Sq. Ft</span>
+          <span>Timeline: 22 Months</span>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card infrastructure group bg-white border border-stone-200 overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/11] overflow-hidden bg-stone-200 relative">
+            <img src="https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&w=1000&q=80" alt="Aero Logistics Park" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-3 left-3 bg-stone-950/80 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">Completed 2024</span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-widest text-ochre font-bold">Industrial & Logistics</span>
+            <h3 class="font-title text-xl font-bold text-stone-950 mt-1">Industrial Logistics Facility</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed font-normal">
+              Pre-engineered heavy steel clear-span warehouse with heavy-load laser screed concrete flooring (FM2 tolerance standards).
+            </p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-3 hairline-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-mono">
+          <span>Area: 92,000 Sq. Ft</span>
+          <span>Timeline: 8 Months</span>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card residential group bg-white border border-stone-200 overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/11] overflow-hidden bg-stone-200 relative">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" alt="Penthouse Renovation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-3 left-3 bg-stone-950/80 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">Completed 2024</span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-widest text-ochre font-bold">Turnkey Renovation</span>
+            <h3 class="font-title text-xl font-bold text-stone-950 mt-1">Highland Architectural Villa</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed font-normal">
+              Complete structural overhaul and modern expansion featuring imported natural stone facade and custom steel glass partitions.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-3 hairline-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-mono">
+          <span>Area: 5,200 Sq. Ft</span>
+          <span>Timeline: 9 Months</span>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="project-card commercial group bg-white border border-stone-200 overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/11] overflow-hidden bg-stone-200 relative">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Corporate Headquarters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-3 left-3 bg-stone-950/80 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">Completed 2023</span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-widest text-ochre font-bold">Commercial Fit-Out</span>
+            <h3 class="font-title text-xl font-bold text-stone-950 mt-1">Meridian Financial Center</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed font-normal">
+              Turnkey interior civil renovation, structural partition reconfiguration, advanced HVAC, and acoustic ceiling engineering.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-3 hairline-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-mono">
+          <span>Area: 42,000 Sq. Ft</span>
+          <span>Timeline: 6 Months</span>
+        </div>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="project-card infrastructure group bg-white border border-stone-200 overflow-hidden flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/11] overflow-hidden bg-stone-200 relative">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80" alt="Civil Bridge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <span class="absolute top-3 left-3 bg-stone-950/80 backdrop-blur-sm text-white px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">Completed 2023</span>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase tracking-widest text-ochre font-bold">Heavy Civil Engineering</span>
+            <h3 class="font-title text-xl font-bold text-stone-950 mt-1">Valley Viaduct & Access Road</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed font-normal">
+              Pre-stressed concrete girder viaduct spanning 420 meters with deep piled foundations engineered for extreme seismic zones.
+            </p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-3 hairline-t border-stone-100 flex items-center justify-between text-xs text-stone-500 font-mono">
+          <span>Area: 420 Meters</span>
+          <span>Timeline: 18 Months</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Interactive Construction Scope & Cost Estimator -->
+  <section id="estimator" class="py-14 sm:py-16 bg-stone-100 hairline-t hairline-b blueprint-grid">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-mono uppercase tracking-widest text-ochre font-bold">Engineering Calculator</span>
+        <h2 class="font-title text-3xl sm:text-5xl font-bold text-stone-950 mt-2 tracking-tight">
+          Project Scope & Material Estimator
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 mt-3 font-normal leading-relaxed">
+          Configure your structural parameters to evaluate material volume, delivery schedule, and estimated construction investment.
+        </p>
+      </div>
+
+      <div class="bg-white border border-stone-300 p-6 sm:p-10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Controls Column -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <!-- Step 1: Structure Type -->
+          <div>
+            <label class="block text-xs uppercase font-bold text-stone-800 mb-2.5">
+              1. Project Category
+            </label>
+            <div class="grid grid-cols-2 gap-2" id="structTypeGrid">
+              <button onclick="setStructureType('residential', 180, 'Residential Villa')" class="type-btn active p-3 bg-stone-950 text-white text-xs font-semibold text-left">
+                Residential Villa
+              </button>
+              <button onclick="setStructureType('commercial', 220, 'Commercial Office')" class="type-btn p-3 bg-stone-100 text-stone-700 hover:bg-stone-200 text-xs font-semibold text-left">
+                Commercial Complex
+              </button>
+              <button onclick="setStructureType('industrial', 130, 'Industrial Warehouse')" class="type-btn p-3 bg-stone-100 text-stone-700 hover:bg-stone-200 text-xs font-semibold text-left">
+                Industrial / Warehouse
+              </button>
+              <button onclick="setStructureType('renovation', 110, 'Structural Remodel')" class="type-btn p-3 bg-stone-100 text-stone-700 hover:bg-stone-200 text-xs font-semibold text-left">
+                Structural Renovation
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Area Slider -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs uppercase font-bold text-stone-800">2. Built-Up Area</label>
+              <span class="font-title text-base font-bold text-stone-950" id="areaDisplay">3,500 Sq. Ft</span>
+            </div>
+            <input type="range" id="areaInput" min="1000" max="25000" step="250" value="3500" oninput="calculateScope()" class="w-full accent-stone-950 cursor-pointer">
+            <div class="flex justify-between text-[11px] font-mono text-stone-500 mt-1">
+              <span>1,000 Sq. Ft</span>
+              <span>10,000 Sq. Ft</span>
+              <span>25,000 Sq. Ft</span>
+            </div>
+          </div>
+
+          <!-- Step 3: Material Grade Package -->
+          <div>
+            <label class="block text-xs uppercase font-bold text-stone-800 mb-2">
+              3. Specification & Finishes Grade
+            </label>
+            <select id="gradeSelect" onchange="calculateScope()" class="w-full bg-stone-50 border border-stone-300 p-3 text-xs text-stone-900 font-semibold focus:outline-none focus:border-stone-900">
+              <option value="1.0">Standard Corporate Grade (Fe500D TMT, OPC 53 Concrete, Vitrified Surfaces)</option>
+              <option value="1.3" selected>Premium Architectural Luxury (Custom Cantilevers, Double Glazing, Teak & Stone)</option>
+              <option value="1.65">Ultra-Luxury Bespoke (Imported Marble, Structural Glass Curtain, Building Automation)</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Output Column -->
+        <div class="lg:col-span-5 bg-stone-950 text-white p-6 sm:p-8 flex flex-col justify-between">
+          
+          <div class="space-y-4">
+            <span class="text-[11px] font-mono uppercase tracking-widest text-stone-400">Estimated Project Investment</span>
+            <div class="font-title text-3xl sm:text-4xl font-bold text-white tracking-tight" id="estimatedTotal">
+              $819,000
+            </div>
+            <p class="text-xs text-stone-400 font-normal leading-relaxed">
+              Based on turnkey execution including architectural blueprints, soil analysis, civil RCC structure, and MEP engineering.
+            </p>
+          </div>
+
+          <!-- Technical Metrics -->
+          <div class="my-6 pt-6 hairline-t border-stone-800 space-y-3 text-xs">
+            <div class="flex justify-between">
+              <span class="text-stone-400">Estimated Timeline:</span>
+              <strong class="text-white font-mono" id="timelineEst">10 to 12 Months</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-400">Structural Steel (TMT):</span>
+              <strong class="text-stone-300 font-mono" id="steelEst">~17.5 Metric Tons</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-400">Concrete Volume (M30):</span>
+              <strong class="text-stone-300 font-mono" id="concreteEst">~140 Cubic Meters</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-stone-400">Structural Warranty:</span>
+              <strong class="text-emerald-400">10 Years Indemnity</strong>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Dispatch -->
+          <button onclick="dispatchScopeWhatsApp()" class="w-full py-4 bg-ochre hover:bg-ochre-light text-white font-title font-bold text-xs uppercase tracking-widest transition-colors shadow-lg">
+            Send Specs to WhatsApp (8140557546) &rarr;
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Engineering Capabilities Section -->
+  <section id="capabilities" class="py-14 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="max-w-3xl mb-8">
+      <span class="text-xs font-mono uppercase tracking-widest text-ochre font-bold">Comprehensive Civil Services</span>
+      <h2 class="font-title text-3xl sm:text-5xl font-bold text-stone-950 mt-2 tracking-tight">
+        End-to-End Civil Engineering Capabilities
+      </h2>
+      <p class="text-xs sm:text-sm text-stone-600 mt-3 font-normal leading-relaxed">
+        We handle all phases under a unified contract: from geotechnical soil verification and 3D architectural modeling to turnkey construction and final handover.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <div class="p-6 bg-white border border-stone-200">
+        <div class="font-mono text-2xl font-bold text-stone-400 mb-4">01</div>
+        <h3 class="font-title text-lg font-bold text-stone-950 mb-2">Pre-Construction & Blueprints</h3>
+        <p class="text-xs text-stone-600 leading-relaxed font-normal">
+          Geotechnical soil investigations, 3D Building Information Modeling (BIM), municipal zoning clearances, and bill of quantities.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white border border-stone-200">
+        <div class="font-mono text-2xl font-bold text-stone-400 mb-4">02</div>
+        <h3 class="font-title text-lg font-bold text-stone-950 mb-2">Structural RCC & Masonry</h3>
+        <p class="text-xs text-stone-600 leading-relaxed font-normal">
+          High-strength foundation piling, seismic shear walls, post-tensioned slabs, and precision load-bearing blockwork.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white border border-stone-200">
+        <div class="font-mono text-2xl font-bold text-stone-400 mb-4">03</div>
+        <h3 class="font-title text-lg font-bold text-stone-950 mb-2">Integrated MEP Systems</h3>
+        <p class="text-xs text-stone-600 leading-relaxed font-normal">
+          Concealed high-pressure plumbing, fire sprinkler distribution, central HVAC ventilation, and low-voltage automation cabling.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white border border-stone-200">
+        <div class="font-mono text-2xl font-bold text-stone-400 mb-4">04</div>
+        <h3 class="font-title text-lg font-bold text-stone-950 mb-2">Turnkey Architectural Handover</h3>
+        <p class="text-xs text-stone-600 leading-relaxed font-normal">
+          Acoustic fenestrations, Italian stone facade dry cladding, snag audits, occupancy certification, and 10-year warranty document.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Engineering Standards & Quality Assurance -->
+  <section id="standards" class="py-12 sm:py-14 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-ochre font-bold">Uncompromising Quality</span>
+          <h2 class="font-title text-3xl sm:text-5xl font-bold text-white tracking-tight">
+            Certified Testing & Zero-Tolerance Safety.
+          </h2>
+          <p class="text-xs sm:text-sm text-stone-300 leading-relaxed font-normal">
+            Every batch of cement and every heat of structural steel undergoes rigorous lab compression and tensile testing before pour. We enforce zero compromise on structural safety.
+          </p>
+          
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-ochre/20 text-ochre flex items-center justify-center font-bold text-xs shrink-0">&check;</span>
+              <div>
+                <strong class="text-sm font-title text-white block">Certified Fe500D & Fe550 TMT Bars Only</strong>
+                <span class="text-xs text-stone-400">High elongation resistance engineered for Seismic Zone IV & V compliance.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-ochre/20 text-ochre flex items-center justify-center font-bold text-xs shrink-0">&check;</span>
+              <div>
+                <strong class="text-sm font-title text-white block">Computerized Ready Mix Concrete (RMC)</strong>
+                <span class="text-xs text-stone-400">Automated batching plants with 7-day and 28-day cube compression strength reports.</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-ochre/20 text-ochre flex items-center justify-center font-bold text-xs shrink-0">&check;</span>
+              <div>
+                <strong class="text-sm font-title text-white block">10-Year Comprehensive Structural Guarantee</strong>
+                <span class="text-xs text-stone-400">Written contractual indemnity against foundation settling, structural cracks, and seepage.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-stone-950 p-8 sm:p-10 border border-stone-800">
+          <h3 class="font-title text-2xl font-bold text-white mb-2">Request On-Site Technical Inspection</h3>
+          <p class="text-xs text-stone-400 mb-6 font-normal">Schedule an initial site inspection with our senior civil engineer within 24 hours.</p>
+
+          <form onsubmit="handleSiteInspection(event)" class="space-y-4 text-xs">
+            <div>
+              <label class="block text-stone-300 font-semibold mb-1">Developer / Owner Name</label>
+              <input type="text" id="inspName" required placeholder="Alexander Vance" class="w-full bg-stone-900 border border-stone-700 p-3 text-white focus:outline-none focus:border-white">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-stone-300 font-semibold mb-1">Phone / WhatsApp</label>
+                <input type="tel" id="inspPhone" required placeholder="+91 81405 57546" class="w-full bg-stone-900 border border-stone-700 p-3 text-white focus:outline-none focus:border-white">
+              </div>
+              <div>
+                <label class="block text-stone-300 font-semibold mb-1">Project Location</label>
+                <input type="text" id="inspLocation" required placeholder="Ahmedabad / Mumbai / Delhi" class="w-full bg-stone-900 border border-stone-700 p-3 text-white focus:outline-none focus:border-white">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-stone-300 font-semibold mb-1">Estimated Plot Area / Requirements</label>
+              <textarea id="inspDetails" rows="3" placeholder="Residential villa on 4,000 sq.ft plot, seeking turnkey structural execution and architectural drawings." class="w-full bg-stone-900 border border-stone-700 p-3 text-white focus:outline-none focus:border-white"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-white hover:bg-stone-200 text-stone-950 font-title font-bold text-xs uppercase tracking-widest transition-colors">
+              Schedule Site Consultation via WhatsApp &rarr;
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact & Office Locations -->
+  <section id="contact" class="py-14 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 pb-10 hairline-b">
+      
+      <div class="lg:col-span-5 space-y-4">
+        <span class="text-xs font-mono uppercase tracking-widest text-ochre font-bold">Contact Firm</span>
+        <h2 class="font-title text-3xl sm:text-4xl font-bold text-stone-950 tracking-tight">
+          Head Office & Engineering Division
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
+          Reach out for tender submissions, private residential project inquiries, or joint-development proposals.
+        </p>
+        
+        <div class="pt-4 space-y-3 text-xs">
+          <div>
+            <span class="text-stone-400 uppercase font-mono block text-[10px]">Direct Mobile / WhatsApp</span>
+            <a href="https://wa.me/918140557546" target="_blank" rel="noopener noreferrer" class="font-title text-base font-bold text-stone-950 hover:text-ochre">
+              +91 81405 57546
+            </a>
+          </div>
+          <div>
+            <span class="text-stone-400 uppercase font-mono block text-[10px]">Head Office Address</span>
+            <span class="text-stone-800 font-medium">Vanguard Tower, Floor 8, Central Business District</span>
+          </div>
+          <div>
+            <span class="text-stone-400 uppercase font-mono block text-[10px]">Operating Hours</span>
+            <span class="text-stone-800 font-medium">Mon - Sat: 09:00 AM - 07:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 bg-white p-8 border border-stone-200">
+        <h3 class="font-title text-xl font-bold text-stone-950 mb-2">Send Project Brief</h3>
+        <p class="text-xs text-stone-600 mb-6 font-normal">Our chief technical estimator will reply with preliminary bill of quantities.</p>
+
+        <form onsubmit="handleDirectInquiry(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-stone-700 font-semibold mb-1">Your Full Name</label>
+              <input type="text" id="contactName" required class="w-full bg-stone-50 border border-stone-300 p-3 text-stone-900 focus:outline-none focus:border-stone-950">
+            </div>
+            <div>
+              <label class="block text-stone-700 font-semibold mb-1">WhatsApp Number</label>
+              <input type="tel" id="contactPhone" required placeholder="+91 81405 57546" class="w-full bg-stone-50 border border-stone-300 p-3 text-stone-900 focus:outline-none focus:border-stone-950">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-stone-700 font-semibold mb-1">Project Type</label>
+            <select id="contactType" class="w-full bg-stone-50 border border-stone-300 p-3 text-stone-900 focus:outline-none focus:border-stone-950">
+              <option>Residential Villa Construction</option>
+              <option>Commercial Complex / Office Tower</option>
+              <option>Industrial Warehouse / Factory</option>
+              <option>Turnkey Interior Renovation</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-stone-700 font-semibold mb-1">Brief Description of Project</label>
+            <textarea id="contactMsg" rows="3" placeholder="Approximate area in sq.ft, location, target start date..." class="w-full bg-stone-50 border border-stone-300 p-3 text-stone-900 focus:outline-none focus:border-stone-950"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 bg-stone-950 hover:bg-stone-800 text-white font-title font-bold text-xs uppercase tracking-widest transition-colors">
+            Submit Project Inquiry &rarr;
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Classical Architectural Footer -->
+  <footer class="bg-stone-950 text-stone-400 py-16 hairline-t border-stone-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 hairline-b border-stone-800">
+        <div class="md:col-span-6 space-y-3">
+          <div class="font-title text-xl font-bold text-white tracking-tight">VANGUARD CIVIL & INFRASTRUCTURE</div>
+          <p class="text-stone-400 max-w-md font-normal leading-relaxed">
+            Registered General Contractors and Structural Engineering Consultants. Licensed for High-Rise and Heavy Industrial Infrastructure.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <span class="font-title text-xs uppercase tracking-wider text-white font-bold block">Sectors</span>
+          <ul class="space-y-1.5 text-stone-400">
+            <li>Residential Estates</li>
+            <li>Commercial Corporate Hubs</li>
+            <li>Industrial Clear-Span Warehouses</li>
+            <li>Pre-Stressed Civil Structures</li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3 space-y-2">
+          <span class="font-title text-xs uppercase tracking-wider text-white font-bold block">Assurance</span>
+          <ul class="space-y-1.5 text-stone-400">
+            <li>ISO 9001:2015 Quality Assured</li>
+            <li>Seismic Zone IV/V Compliance</li>
+            <li>100% Milestone Progress Audits</li>
+            <li>10-Year Indemnity Protection</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500">
+        <div>&copy; 2026 VANGUARD Civil & Infrastructure. All rights reserved.</div>
+        <div>
+          Website Showcase Concept Crafted by <a href="https://bestminders.github.io/" class="text-ochre hover:underline font-semibold">Best Minders</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script for Interactive Estimator, Filters & Dynamic Count-Up Animation -->
+  <script>
+    let currentRate = 180;
+    let currentTypeName = 'Residential Villa';
+
+    function setStructureType(type, rate, name) {
+      currentRate = rate;
+      currentTypeName = name;
+      document.querySelectorAll('#structTypeGrid .type-btn').forEach(btn => {
+        btn.classList.remove('bg-stone-950', 'text-white');
+        btn.classList.add('bg-stone-100', 'text-stone-700');
+      });
+
+      const clicked = event.currentTarget;
+      clicked.classList.remove('bg-stone-100', 'text-stone-700');
+      clicked.classList.add('bg-stone-950', 'text-white');
+      calculateScope();
+    }
+
+    function calculateScope() {
+      const area = parseInt(document.getElementById('areaInput').value, 10);
+      const mult = parseFloat(document.getElementById('gradeSelect').value);
+
+      document.getElementById('areaDisplay').innerText = area.toLocaleString() + ' Sq. Ft';
+
+      const total = Math.round(area * currentRate * mult);
+      document.getElementById('estimatedTotal').innerText = '$' + total.toLocaleString();
+
+      // Steel: approx 5 kg/sq.ft = 0.005 metric tons/sq.ft
+      const steelTons = (area * 0.005).toFixed(1);
+      document.getElementById('steelEst').innerText = '~' + steelTons + ' Metric Tons';
+
+      // Concrete: approx 0.04 cubic meters/sq.ft
+      const concreteM3 = Math.round(area * 0.04);
+      document.getElementById('concreteEst').innerText = '~' + concreteM3.toLocaleString() + ' Cubic Meters';
+
+      // Timeline calculation
+      let timeline = '8 to 10 Months';
+      if (area > 15000) timeline = '16 to 20 Months';
+      else if (area > 8000) timeline = '12 to 15 Months';
+      else if (area > 4000) timeline = '10 to 12 Months';
+      document.getElementById('timelineEst').innerText = timeline;
+    }
+
+    function dispatchScopeWhatsApp() {
+      const area = document.getElementById('areaInput').value;
+      const total = document.getElementById('estimatedTotal').innerText;
+      const timeline = document.getElementById('timelineEst').innerText;
+
+      const message = `Hi VANGUARD Construction, I generated an estimate on your website:%0A- Sector: ${encodeURIComponent(currentTypeName)}%0A- Area: ${area} Sq.Ft%0A- Investment: ${encodeURIComponent(total)}%0A- Estimated Timeline: ${encodeURIComponent(timeline)}%0APlease schedule an architectural consultation.`;
+      window.open(`https://wa.me/918140557546?text=${message}`, '_blank');
+    }
+
+    function filterPortfolio(filter) {
+      document.querySelectorAll('#portfolioFilter .p-btn').forEach(btn => {
+        if (btn.dataset.filter === filter) {
+          btn.classList.add('bg-stone-950', 'text-white');
+          btn.classList.remove('bg-stone-100', 'text-stone-700');
+        } else {
+          btn.classList.remove('bg-stone-950', 'text-white');
+          btn.classList.add('bg-stone-100', 'text-stone-700');
+        }
+      });
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (filter === 'all' || card.classList.contains(filter)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function handleSiteInspection(e) {
+      e.preventDefault();
+      const name = document.getElementById('inspName').value;
+      const phone = document.getElementById('inspPhone').value;
+      const loc = document.getElementById('inspLocation').value;
+      const details = document.getElementById('inspDetails').value;
+
+      const text = `Hi VANGUARD, Site Inspection Request:%0A- Name: ${encodeURIComponent(name)}%0A- Phone: ${encodeURIComponent(phone)}%0A- Location: ${encodeURIComponent(loc)}%0A- Project Specs: ${encodeURIComponent(details)}`;
+      window.open(`https://wa.me/918140557546?text=${text}`, '_blank');
+    }
+
+    function handleDirectInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('contactName').value;
+      const phone = document.getElementById('contactPhone').value;
+      const type = document.getElementById('contactType').value;
+      const msg = document.getElementById('contactMsg').value;
+
+      const text = `Hi VANGUARD, Project Inquiry:%0A- Name: ${encodeURIComponent(name)}%0A- Phone: ${encodeURIComponent(phone)}%0A- Type: ${encodeURIComponent(type)}%0A- Message: ${encodeURIComponent(msg)}`;
+      window.open(`https://wa.me/918140557546?text=${text}`, '_blank');
+    }
+
+    // Dynamic Runtime Counter Animation
+    function initStatsCounter() {
+      const statsSection = document.getElementById('stats-section');
+      if (!statsSection) return;
+
+      let hasAnimated = false;
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hasAnimated) {
+            hasAnimated = true;
+            runCounterAnimation();
+          }
+        });
+      }, { threshold: 0.15 });
+
+      observer.observe(statsSection);
+
+      function runCounterAnimation() {
+        const counters = document.querySelectorAll('.counter-num');
+        counters.forEach(counter => {
+          const target = parseFloat(counter.getAttribute('data-target'));
+          const suffix = counter.getAttribute('data-suffix') || '';
+          const decimals = parseInt(counter.getAttribute('data-decimals') || '0', 10);
+          const duration = 1600; // 1.6s
+          const startTime = performance.now();
+
+          function frame(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out quartic for natural deceleration
+            const ease = 1 - Math.pow(1 - progress, 4);
+            const current = (target * ease).toFixed(decimals);
+            counter.innerText = current + suffix;
+
+            if (progress < 1) {
+              requestAnimationFrame(frame);
+            } else {
+              counter.innerText = target.toFixed(decimals) + suffix;
+            }
+          }
+          requestAnimationFrame(frame);
+        });
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initStatsCounter);
+    } else {
+      initStatsCounter();
+    }
+  </script>
+  <!-- Floating Civil Concierge WhatsApp Widget -->
+  <aside aria-label="WhatsApp quick chat" style="position:fixed; bottom:24px; right:24px; z-index:9999; display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+    <div id="wa-bubble-construction" style="background:#1c1917; color:#f5f5f4; font-size:12px; font-weight:600; padding:8px 14px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.6); border:1px solid rgba(217,119,6,0.3); display:flex; align-items:center; gap:8px;">
+      <span style="width:8px; height:8px; border-radius:50%; background:#10b981; display:inline-block;"></span>
+      <span>VANGUARD Civil Desk: WhatsApp Instant Estimate</span>
+      <button onclick="document.getElementById('wa-bubble-construction').style.display='none'" style="background:none; border:none; color:#a8a29e; font-size:16px; cursor:pointer; line-height:1; margin-left:4px;">&times;</button>
+    </div>
+    <a href="https://wa.me/918140557546?text=Hi%20VANGUARD%20Civil,%20I%20want%20to%20discuss%20a%20construction%20project%20or%20site%20inspection." target="_blank" rel="noopener noreferrer" style="width:56px; height:56px; border-radius:50%; background:#25D366; box-shadow:0 10px 25px rgba(37,211,102,0.4); display:flex; align-items:center; justify-content:center; text-decoration:none; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" aria-label="Chat on WhatsApp">
+      <svg style="width:28px; height:28px; fill:#ffffff;" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.186 1.564 5.942l-1.564 5.709 5.856-1.536c1.701.928 3.652 1.455 5.728 1.455 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+  </aside>
+
+</body>
+</html>

@@ -76,5 +76,17 @@
   </head>
   <body class="bg-white text-gray-900 font-sans antialiased selection:bg-amber-500 selection:text-black overflow-x-hidden">
     <div id="root"></div>
-  </body>
+      <!-- Floating Restaurant WhatsApp Widget -->
+    <aside aria-label="WhatsApp quick chat" style="position:fixed; bottom:24px; right:24px; z-index:9999; display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+      <div id="wa-bubble-resto1" style="background:#1c1917; color:#f5f5f4; font-size:12px; font-weight:600; padding:8px 14px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.6); border:1px solid rgba(245,158,11,0.3); display:flex; align-items:center; gap:8px;">
+        <span style="width:8px; height:8px; border-radius:50%; background:#10b981; display:inline-block;"></span>
+        <span>EMBER Dining: Table & Catering WhatsApp</span>
+        <button onclick="document.getElementById('wa-bubble-resto1').style.display='none'" style="background:none; border:none; color:#a8a29e; font-size:16px; cursor:pointer; line-height:1; margin-left:4px;">&times;</button>
+      </div>
+      <a href="https://wa.me/918140557546?text=Hi%20EMBER%20Restaurant,%20I%20want%20to%20reserve%20a%20table%20or%20inquire%20about%20catering." target="_blank" rel="noopener noreferrer" style="width:56px; height:56px; border-radius:50%; background:#25D366; box-shadow:0 10px 25px rgba(37,211,102,0.4); display:flex; align-items:center; justify-content:center; text-decoration:none; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" aria-label="Chat on WhatsApp">
+        <svg style="width:28px; height:28px; fill:#ffffff;" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.186 1.564 5.942l-1.564 5.709 5.856-1.536c1.701.928 3.652 1.455 5.728 1.455 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+    </aside>
+  
+</body>
 </html>
