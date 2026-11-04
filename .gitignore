@@ -1,0 +1,17 @@
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Temporary & Archive Scripts
+_archive*
+*.tmp
+*.log
+scratch/
+test_*.dart
+verify_*.dart
+inspect_*.dart
+*.ps1
+!serve.ps1
