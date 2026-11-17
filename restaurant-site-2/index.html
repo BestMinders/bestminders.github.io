@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAVORY | Artisanal Fine Dining & Wine Cellar</title>
-  <meta name="description" content="Savory is an artisanal fine dining restaurant featuring seasonal tasting menus, sommelier cellar pairings, and private dining rooms.">
+  <title>SAVORY | Michelin-Grade Artisanal Degustation & Wine Cellar</title>
+  <meta name="description" content="Savory is a premier candlelit degustation dining room. Seven-course seasonal tasting journeys, sommelier cellar flights, and private salon dining.">
   <link rel="canonical" href="https://bestminders.github.io/restaurant-site-2/">
   <link rel="icon" type="image/png" href="/favicon.png">
 
   <!-- Google Fonts: Fraunces (Headlines) & Manrope (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600;1,9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,21 +20,19 @@
       theme: {
         extend: {
           colors: {
-            paper: '#FDFBF7',
-            cream: '#F5EFE3',
-            ink: '#111111',
-            charcoal: '#1C1C1C',
-            borderWarm: '#E8E0D0',
-            brandText: {
-              primary: '#141414',
-              secondary: '#5C5A54',
-              muted: '#A8A8A8'
+            obsidian: '#0E0D0B',
+            noirCard: '#161412',
+            noirCardHover: '#1E1B18',
+            goldChampagne: {
+              DEFAULT: '#C5A059',
+              hover: '#DFBA6B',
+              muted: '#8F733C',
+              tint: 'rgba(197, 160, 89, 0.12)'
             },
-            savoryGold: {
-              DEFAULT: '#A67C00',
-              hover: '#8A6500',
-              light: '#FAF3E3'
-            }
+            borderDark: '#26221D',
+            textCream: '#F5EFE3',
+            textAlabaster: '#B5ABA0',
+            textMutedDark: '#787066'
           },
           fontFamily: {
             serif: ['"Fraunces"', 'Georgia', 'serif'],
@@ -46,423 +44,540 @@
   </script>
   <style>
     body {
-      background-color: #FDFBF7;
-      color: #141414;
+      background-color: #0E0D0B;
+      color: #F5EFE3;
       font-family: 'Manrope', -apple-system, sans-serif;
     }
     .font-serif-title {
       font-family: 'Fraunces', Georgia, serif;
     }
-    .paper-grain {
-      background-image: radial-gradient(rgba(17, 17, 17, 0.04) 1px, transparent 0);
-      background-size: 24px 24px;
+    .candlelight-glow {
+      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(197, 160, 89, 0.14), transparent 70%);
     }
-    .savory-card {
-      background: #FFFFFF;
-      border: 1px solid #E8E0D0;
+    .noir-card {
+      background-color: #161412;
+      border: 1px solid #26221D;
       border-radius: 12px;
-      box-shadow: 0 2px 8px -2px rgba(17, 17, 17, 0.04);
-      transition: all 0.25s ease-in-out;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .savory-card:hover {
-      border-color: #A67C00;
-      box-shadow: 0 10px 24px -4px rgba(166, 124, 0, 0.15);
+    .noir-card:hover {
+      border-color: #C5A059;
+      background-color: #1A1714;
+      box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(197, 160, 89, 0.15);
       transform: translateY(-2px);
     }
-    .btn-savory-primary {
+    .btn-gold-luxury {
       height: 52px;
       border-radius: 12px;
-      background-color: #111111;
-      color: #FFFFFF;
-      font-weight: 600;
+      background-color: #C5A059;
+      color: #0E0D0B;
+      font-weight: 700;
+      letter-spacing: 0.02em;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 0 24px;
-      transition: all 0.2s ease;
+      padding: 0 28px;
+      transition: all 0.25s ease;
     }
-    .btn-savory-primary:hover {
-      background-color: #A67C00;
-      color: #FFFFFF;
+    .btn-gold-luxury:hover {
+      background-color: #DFBA6B;
+      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.35);
+      transform: translateY(-1px);
     }
-    .btn-savory-secondary {
+    .btn-noir-luxury {
       height: 52px;
       border-radius: 12px;
-      background-color: #F5EFE3;
-      border: 1px solid #E8E0D0;
-      color: #141414;
+      background-color: #161412;
+      border: 1px solid #26221D;
+      color: #F5EFE3;
       font-weight: 600;
+      letter-spacing: 0.02em;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 0 24px;
-      transition: all 0.2s ease;
+      padding: 0 28px;
+      transition: all 0.25s ease;
     }
-    .btn-savory-secondary:hover {
-      background-color: #FFFFFF;
-      border-color: #A67C00;
-      color: #A67C00;
+    .btn-noir-luxury:hover {
+      border-color: #C5A059;
+      color: #C5A059;
+      background-color: #1E1B18;
     }
   </style>
 </head>
-<body class="selection:bg-amber-100 selection:text-ink antialiased">
+<body class="selection:bg-[#C5A059] selection:text-black antialiased overflow-x-hidden">
 
   <!-- Top Sticky Best Minders Demo Banner -->
-  <aside aria-label="Demo notice" class="bg-[#111111] text-[#FDFBF7] text-xs font-medium py-2.5 px-4 sticky top-0 z-50 border-b border-[#2A2A2A]">
+  <aside aria-label="Demo notice" class="bg-[#080706] text-[#B5ABA0] text-xs font-medium py-2.5 px-4 sticky top-0 z-50 border-b border-[#1E1B18]">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center gap-2">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="text-neutral-400">Live Client Showcase:</span>
-        <span class="font-semibold text-white">Savory Fine Dining & Sommelier Tasting Experience</span>
-        <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-[#FAF3E3]/10 text-amber-300 text-[11px] font-semibold">Restaurant Demo</span>
+        <span class="text-[#787066]">Live Client Showcase:</span>
+        <span class="font-semibold text-white">SAVORY Candlelit Degustation & Wine Cellar</span>
+        <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-[#C5A059]/15 text-[#DFBA6B] text-[11px] font-semibold border border-[#C5A059]/30">Nocturne Luxury Demo</span>
       </div>
       <div class="flex items-center gap-4 text-xs">
-        <a href="https://bestminders.github.io/" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 transition-colors font-semibold">
+        <a href="https://bestminders.github.io/" class="inline-flex items-center gap-1.5 text-[#DFBA6B] hover:text-white transition-colors font-semibold">
           <span>&larr;</span> Back to Best Minders Studio
         </a>
-        <a href="https://wa.me/918140557546?text=Hi%20Best%20Minders,%20I%20love%20the%20Savory%20restaurant%20demo%20website.%20Can%20we%20build%20one%20for%20my%20business%3F" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1 text-white bg-amber-600/30 hover:bg-amber-600/50 px-2.5 py-1 rounded-md border border-amber-500/40 font-medium">
-          Get This Site For Your Restaurant &rarr;
+        <a href="https://wa.me/918140557546?text=Hi%20Best%20Minders,%20I%20love%20the%20SAVORY%20dark%20luxury%20dining%20demo%20website.%20Can%20we%20build%20one%20for%20my%20fine%20dining%20restaurant%3F" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1 text-white bg-[#C5A059]/30 hover:bg-[#C5A059]/50 px-2.5 py-1 rounded-md border border-[#C5A059]/50 font-medium">
+          Get This Dark Luxury Site &rarr;
         </a>
       </div>
     </div>
   </aside>
 
-  <!-- Main Navigation Header -->
-  <header class="bg-[#FDFBF7]/90 backdrop-blur-md sticky top-[41px] z-40 border-b border-[#E8E0D0]">
+  <!-- Nocturne Navigation Bar -->
+  <header class="bg-[#0E0D0B]/95 backdrop-blur-md sticky top-[41px] z-40 border-b border-[#1E1B18]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-[#111111] text-[#FDFBF7] flex items-center justify-center font-serif-title text-xl font-bold border border-[#A67C00]">
+        <div class="w-10 h-10 rounded-xl bg-[#161412] text-[#C5A059] flex items-center justify-center font-serif-title text-xl font-bold border border-[#C5A059]/50 shadow-md">
           S
         </div>
         <div>
-          <span class="font-serif-title text-2xl font-bold tracking-tight text-[#141414] block leading-none">SAVORY</span>
-          <span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#A67C00] block mt-1">Artisanal Dining</span>
+          <span class="font-serif-title text-2xl font-bold tracking-tight text-[#F5EFE3] block leading-none">SAVORY</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#C5A059] block mt-1">Artisanal Degustation</span>
         </div>
       </div>
 
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#5C5A54]">
-        <a href="#tasting" class="hover:text-[#141414] transition-colors">Tasting Menu</a>
-        <a href="#cellar" class="hover:text-[#141414] transition-colors">Wine Cellar</a>
-        <a href="#origin" class="hover:text-[#141414] transition-colors">Our Origin</a>
-        <a href="#private-dining" class="hover:text-[#141414] transition-colors">Private Rooms</a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#B5ABA0]">
+        <a href="#journey" class="hover:text-[#C5A059] transition-colors">Tasting Journey</a>
+        <a href="#sommelier" class="hover:text-[#C5A059] transition-colors">Cellar & Sommelier</a>
+        <a href="#salons" class="hover:text-[#C5A059] transition-colors">Private Salons</a>
+        <a href="#experience" class="hover:text-[#C5A059] transition-colors">Philosophy</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <button onclick="openBookingDrawer()" class="btn-savory-primary !h-11 !px-5 text-sm">
+        <button onclick="openBookingDrawer()" class="btn-gold-luxury !h-11 !px-5 text-xs uppercase tracking-wider">
           Reserve Seating &rarr;
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative paper-grain pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden border-b border-[#E8E0D0]">
+  <!-- Hero Section: Candlelit Dramatic Atmosphere -->
+  <section class="relative candlelight-glow pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden border-b border-[#1E1B18]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Center Editorial Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-6 mb-16">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#161412] border border-[#C5A059]/40 text-xs font-semibold text-[#DFBA6B] tracking-widest uppercase">
+          <span class="w-2 h-2 rounded-full bg-[#C5A059]"></span>
+          MICHELIN SELECTED 2026 &bull; EVENING DEGUSTATIONS ONLY
+        </div>
+
+        <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F5EFE3] leading-[1.08] tracking-tight">
+          A ritual of quiet seasons, rare vintages, and <i class="text-[#C5A059] font-normal">candlelit</i> devotion.
+        </h1>
+
+        <p class="text-base sm:text-lg text-[#B5ABA0] leading-relaxed max-w-2xl mx-auto font-normal">
+          SAVORY is an intimate 28-seat sanctuary dedicated to multi-course degustation gastronomy. Every course is conceived from wild-harvested botanicals, coastal seafood, and biodynamic European cellar allocations.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-3">
+          <button onclick="openBookingDrawer()" class="btn-gold-luxury">
+            Request A Dining Table &rarr;
+          </button>
+          <a href="#journey" class="btn-noir-luxury">
+            Explore 7-Course Journey
+          </a>
+        </div>
+      </div>
+
+      <!-- Dual Visual Composition: Dining Room & Cellar Vault -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
         
-        <!-- Left Column -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF3E3] border border-[#E8E0D0] text-xs font-semibold text-[#A67C00] tracking-wide">
-            <span class="w-2 h-2 rounded-full bg-[#A67C00]"></span>
-            CURATED TASTING MENUS &bull; SOMMELIER WINE PAIRINGS
-          </div>
-
-          <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-bold text-[#141414] leading-[1.08] tracking-tight">
-            Artisanal plates, thoughtful pairings, and <i class="text-[#A67C00] font-normal">quiet</i> luxury.
-          </h1>
-
-          <p class="text-base sm:text-lg text-[#5C5A54] leading-relaxed max-w-xl font-normal">
-            Savory celebrates regional culinary craftsmanship with five and seven-course seasonal journeys. Every dish is paired with rare organic vintages and served in an understated, sunlit sanctuary.
-          </p>
-
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <button onclick="openBookingDrawer()" class="btn-savory-primary">
-              Book A Table &rarr;
-            </button>
-            <a href="#tasting" class="btn-savory-secondary">
-              View Tasting Journey
-            </a>
-          </div>
-
-          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-[#E8E0D0]/80">
-            <div>
-              <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#141414]">7 Course</p>
-              <p class="text-xs text-[#5C5A54] font-medium mt-0.5">Seasonal Journey</p>
-            </div>
-            <div>
-              <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#141414]">240+</p>
-              <p class="text-xs text-[#5C5A54] font-medium mt-0.5">Cellar Vintages</p>
-            </div>
-            <div>
-              <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#141414]">32 Seats</p>
-              <p class="text-xs text-[#5C5A54] font-medium mt-0.5">Intimate Dining Room</p>
-            </div>
+        <div class="md:col-span-7 relative rounded-2xl overflow-hidden border border-[#26221D] shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80" 
+            alt="Candlelit Dining Atmosphere at Savory" 
+            class="w-full h-[380px] sm:h-[460px] object-cover filter brightness-[0.8] contrast-[1.1]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0E0D0B] via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="text-[11px] font-bold uppercase tracking-widest text-[#C5A059] bg-[#0E0D0B]/80 px-2.5 py-1 rounded border border-[#C5A059]/30">The Dining Sanctuary</span>
+            <p class="font-serif-title text-xl font-bold text-white mt-2">Soft candlelight, acoustic hush, and tables set 12 feet apart.</p>
           </div>
         </div>
 
-        <!-- Right Column: Featured Visual -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative rounded-2xl overflow-hidden border border-[#E8E0D0] shadow-xl lg:rotate-[0.6deg] hover:rotate-0 transition-transform duration-300">
-            <img 
-              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" 
-              alt="Savory Artisanal Dining Atmosphere" 
-              class="w-full h-[440px] sm:h-[500px] object-cover"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
-              <span class="inline-block px-3 py-1 rounded-full bg-[#A67C00] text-xs font-bold tracking-wider uppercase">Current Tasting Highlight</span>
-              <h3 class="font-serif-title text-2xl font-bold leading-snug">Seared Hokkaido Scallop with Saffron Velouté & Sea Fennel</h3>
-              <p class="text-xs text-neutral-300">Paired with 2021 Domaine Vacheron Sancerre Blanc.</p>
-            </div>
-          </div>
-
-          <div class="absolute -bottom-5 -left-4 sm:left-4 bg-[#FFFFFF] border border-[#E8E0D0] rounded-xl p-4 shadow-lg flex items-center gap-3">
-            <div class="w-11 h-11 rounded-lg bg-[#FAF3E3] flex items-center justify-center text-[#A67C00]">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-            <div>
-              <p class="text-xs font-bold text-[#141414]">Wine Spectator Award</p>
-              <p class="text-[11px] text-[#5C5A54]">Best of Award of Excellence 2025</p>
-            </div>
+        <div class="md:col-span-5 relative rounded-2xl overflow-hidden border border-[#26221D] shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=80" 
+            alt="Subterranean Wine Cellar Vault" 
+            class="w-full h-[380px] sm:h-[460px] object-cover filter brightness-[0.75]"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0E0D0B] via-transparent to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <span class="text-[11px] font-bold uppercase tracking-widest text-[#C5A059] bg-[#0E0D0B]/80 px-2.5 py-1 rounded border border-[#C5A059]/30">Subterranean Vault</span>
+            <p class="font-serif-title text-xl font-bold text-white mt-2">Over 380 temperature-controlled biodynamic vintages.</p>
           </div>
         </div>
 
       </div>
+
+      <!-- Quick Trust Indicators -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-16 mt-12 border-t border-[#1E1B18] text-center">
+        <div>
+          <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#C5A059]">7-Course</p>
+          <p class="text-xs text-[#787066] mt-1 font-medium">Nightly Tasting Degustation</p>
+        </div>
+        <div>
+          <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#C5A059]">28 Seats</p>
+          <p class="text-xs text-[#787066] mt-1 font-medium">Single Seating Per Table</p>
+        </div>
+        <div>
+          <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#C5A059]">100%</p>
+          <p class="text-xs text-[#787066] mt-1 font-medium">Traceable Organic Produce</p>
+        </div>
+        <div>
+          <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#C5A059]">Grand Award</p>
+          <p class="text-xs text-[#787066] mt-1 font-medium">Sommelier Selection 2025</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- Interactive Tasting Menu Selector -->
-  <section id="tasting" class="py-20 lg:py-28 bg-[#FFFFFF] border-b border-[#E8E0D0]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Interactive Degustation Journey (Course by Course) -->
+  <section id="journey" class="py-20 lg:py-28 bg-[#0E0D0B] border-b border-[#1E1B18]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="inline-block text-xs font-bold uppercase tracking-[0.16em] text-[#A67C00] mb-2">SPRING TASTING EXPERIENCES</span>
-        <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] tracking-tight">
-          Select your culinary <i class="text-[#A67C00] font-normal">journey</i>.
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#C5A059] mb-2">SEASONAL DEGUSTATION MENU</span>
+        <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5EFE3] tracking-tight">
+          The Spring <i class="text-[#C5A059] font-normal">Symphony</i>.
         </h2>
-        <p class="text-sm sm:text-base text-[#5C5A54] mt-3">
-          Our tasting menus are designed to be enjoyed by the entire table, accompanied by thoughtful non-alcoholic or sommelier wine pairings.
+        <p class="text-sm text-[#B5ABA0] mt-3">
+          Switch between our 7-Course Grand Degustation and 5-Course Signature Flight below. Each plate arrives synchronized with its sommelier wine pairing.
         </p>
+
+        <!-- Course Switcher Buttons -->
+        <div class="inline-flex items-center gap-3 p-1.5 rounded-2xl bg-[#161412] border border-[#26221D] mt-8">
+          <button onclick="toggleDegustation('grand')" id="btn-deg-grand" class="px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#C5A059] text-[#0E0D0B]">
+            7-Course Grand Degustation (&#8377;5,400)
+          </button>
+          <button onclick="toggleDegustation('sig')" id="btn-deg-sig" class="px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-transparent text-[#B5ABA0] hover:text-white">
+            5-Course Signature Flight (&#8377;3,900)
+          </button>
+        </div>
       </div>
 
-      <!-- Menu Tier Switcher -->
-      <div class="flex items-center justify-center gap-3 mb-12">
-        <button onclick="switchTasting('seven')" id="btn-seven" class="px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#111111] text-white">
-          7-Course Grand Tasting (&#8377;4,800)
-        </button>
-        <button onclick="switchTasting('five')" id="btn-five" class="px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]">
-          5-Course Signature Tasting (&#8377;3,600)
-        </button>
-      </div>
-
-      <!-- Tasting Courses Container -->
-      <div class="max-w-3xl mx-auto space-y-4" id="tasting-courses">
+      <!-- Course Timeline Grid -->
+      <div class="space-y-6" id="course-cards-container">
 
         <!-- Course 1 -->
-        <div class="savory-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-4">
-            <span class="font-serif-title text-2xl font-bold text-[#A67C00] w-8">01</span>
-            <div>
-              <h3 class="font-serif-title text-lg font-bold text-[#141414]">Amuse-Bouche &bull; Smoked Ricotta Tartlet</h3>
-              <p class="text-xs text-[#5C5A54] mt-1">Crisp buckwheat shell, house-made lemon thyme ricotta, and candied winter melon pearls.</p>
-              <p class="text-[11px] text-[#A67C00] font-semibold mt-1.5">Pairing: NV Pierre Peters Blanc de Blancs Champagne</p>
+        <div class="noir-card p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex items-start gap-5">
+            <span class="font-serif-title text-3xl font-bold text-[#C5A059] w-12 shrink-0">I</span>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded border border-[#C5A059]/20">Awakening</span>
+                <span class="text-xs text-[#787066]">Course 01</span>
+              </div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Chilled Cucumber & Oyster Leaf Consommé</h3>
+              <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+                Clarified heirloom cucumber broth infused with pickled white strawberries, wild sea purslane, and finger lime spheres.
+              </p>
             </div>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#FAF3E3] text-[#A67C00] shrink-0">Awakening</span>
+          <div class="md:text-right shrink-0 border-t md:border-t-0 md:border-l border-[#26221D] pt-4 md:pt-0 md:pl-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-[#C5A059]">Sommelier Flight</p>
+            <p class="text-xs text-[#F5EFE3] font-semibold mt-0.5">NV Billecart-Salmon Brut Rosé</p>
+            <p class="text-[11px] text-[#787066]">Mareuil-sur-Aÿ, Champagne</p>
+          </div>
         </div>
 
         <!-- Course 2 -->
-        <div class="savory-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-4">
-            <span class="font-serif-title text-2xl font-bold text-[#A67C00] w-8">02</span>
-            <div>
-              <h3 class="font-serif-title text-lg font-bold text-[#141414]">Cold Course &bull; Cured Kampachi Crudo</h3>
-              <p class="text-xs text-[#5C5A54] mt-1">Fermented gooseberry dashi, pickled kohlrabi ribbons, shiso oil, and finger lime caviar.</p>
-              <p class="text-[11px] text-[#A67C00] font-semibold mt-1.5">Pairing: 2022 Keller Riesling Trocken, Rheinhessen</p>
+        <div class="noir-card p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex items-start gap-5">
+            <span class="font-serif-title text-3xl font-bold text-[#C5A059] w-12 shrink-0">II</span>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded border border-[#C5A059]/20">Raw & Coast</span>
+                <span class="text-xs text-[#787066]">Course 02</span>
+              </div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Hokkaido Scallop Crudo with Bergamot & White Asparagus</h3>
+              <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+                Diver caught wild scallop shaved over fermented white asparagus ribbon, elderflower dashi vinaigrette, and oscietra caviar.
+              </p>
             </div>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#FAF3E3] text-[#A67C00] shrink-0">Raw & Sea</span>
+          <div class="md:text-right shrink-0 border-t md:border-t-0 md:border-l border-[#26221D] pt-4 md:pt-0 md:pl-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-[#C5A059]">Sommelier Flight</p>
+            <p class="text-xs text-[#F5EFE3] font-semibold mt-0.5">2021 Domaine Sigalas Assyrtiko</p>
+            <p class="text-[11px] text-[#787066]">Santorini, Greece</p>
+          </div>
         </div>
 
         <!-- Course 3 -->
-        <div class="savory-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-4">
-            <span class="font-serif-title text-2xl font-bold text-[#A67C00] w-8">03</span>
-            <div>
-              <h3 class="font-serif-title text-lg font-bold text-[#141414]">Garden Course &bull; Ember-Roasted Heritage Carrots</h3>
-              <p class="text-xs text-[#5C5A54] mt-1">Whipped sheep curd, black garlic caramel, spiced pepitas, and carrot top chimichurri.</p>
-              <p class="text-[11px] text-[#A67C00] font-semibold mt-1.5">Pairing: 2021 Domaine Huet Vouvray Le Haut-Lieu</p>
+        <div class="noir-card p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex items-start gap-5">
+            <span class="font-serif-title text-3xl font-bold text-[#C5A059] w-12 shrink-0">III</span>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-800/30">Forest Floor</span>
+                <span class="text-xs text-[#787066]">Course 03</span>
+              </div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Handmade Agnolotti with Black Truffle & Smoked Ricotta</h3>
+              <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+                Silky 40-yolk egg pasta pillows filled with mountain sheep ricotta, bathed in brown butter hazelnut emulsion and shaved Périgord truffle.
+              </p>
             </div>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-50 text-emerald-800 shrink-0">Soil & Flora</span>
+          <div class="md:text-right shrink-0 border-t md:border-t-0 md:border-l border-[#26221D] pt-4 md:pt-0 md:pl-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-[#C5A059]">Sommelier Flight</p>
+            <p class="text-xs text-[#F5EFE3] font-semibold mt-0.5">2019 Domaine Leflaive Puligny-Montrachet</p>
+            <p class="text-[11px] text-[#787066]">Côte de Beaune, Burgundy</p>
+          </div>
         </div>
 
         <!-- Course 4 -->
-        <div class="savory-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-4">
-            <span class="font-serif-title text-2xl font-bold text-[#A67C00] w-8">04</span>
-            <div>
-              <h3 class="font-serif-title text-lg font-bold text-[#141414]">Fish Course &bull; Slow-Cooked Glacier 51 Toothfish</h3>
-              <p class="text-xs text-[#5C5A54] mt-1">Charred leek emulsion, brown butter dashi, crisp sunchoke scales, and nasturtium.</p>
-              <p class="text-[11px] text-[#A67C00] font-semibold mt-1.5">Pairing: 2020 Louis Latour Chassagne-Montrachet</p>
+        <div class="noir-card p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex items-start gap-5">
+            <span class="font-serif-title text-3xl font-bold text-[#C5A059] w-12 shrink-0">IV</span>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded border border-[#C5A059]/20">Deep Waters</span>
+                <span class="text-xs text-[#787066]">Course 04</span>
+              </div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Poached Glacier 51 Toothfish in Saffron Dashi</h3>
+              <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+                Sustainably caught Antarctic toothfish slow poached in Kashmiri saffron broth, braised baby fennel, and crisp wild samphire.
+              </p>
             </div>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#FAF3E3] text-[#A67C00] shrink-0">Ocean Deep</span>
+          <div class="md:text-right shrink-0 border-t md:border-t-0 md:border-l border-[#26221D] pt-4 md:pt-0 md:pl-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-[#C5A059]">Sommelier Flight</p>
+            <p class="text-xs text-[#F5EFE3] font-semibold mt-0.5">2020 Viña Tondonia Blanco Reserva</p>
+            <p class="text-[11px] text-[#787066]">Rioja Alta, Spain</p>
+          </div>
         </div>
 
         <!-- Course 5: (Hidden in 5-course) -->
-        <div class="savory-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 course-extra">
-          <div class="flex items-start gap-4">
-            <span class="font-serif-title text-2xl font-bold text-[#A67C00] w-8">05</span>
-            <div>
-              <h3 class="font-serif-title text-lg font-bold text-[#141414]">Intermezzo &bull; Bergamot & Green Apple Granita</h3>
-              <p class="text-xs text-[#5C5A54] mt-1">Infused with wild Himalayan pine shoot oil and sparkling elderflower tonic.</p>
+        <div class="noir-card p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 extra-deg-course">
+          <div class="flex items-start gap-5">
+            <span class="font-serif-title text-3xl font-bold text-[#C5A059] w-12 shrink-0">V</span>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded border border-[#C5A059]/20">Palate Cleanser</span>
+                <span class="text-xs text-[#787066]">Course 05</span>
+              </div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Wild Juniper & Yuzu Sorbet</h3>
+              <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+                Alpine juniper berry infusion churned with Japanese yuzu juice, served over crushed crystalline spruce tips.
+              </p>
             </div>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#FAF3E3] text-[#A67C00] shrink-0">Palate Cleanser</span>
+          <div class="md:text-right shrink-0 border-t md:border-t-0 md:border-l border-[#26221D] pt-4 md:pt-0 md:pl-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-[#C5A059]">Botanical Interlude</p>
+            <p class="text-xs text-[#F5EFE3] font-semibold mt-0.5">House Distilled Cedar Water</p>
+            <p class="text-[11px] text-[#787066]">Zero Alcohol Botanical</p>
+          </div>
         </div>
 
         <!-- Course 6 -->
-        <div class="savory-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-4">
-            <span class="font-serif-title text-2xl font-bold text-[#A67C00] w-8">06</span>
-            <div>
-              <h3 class="font-serif-title text-lg font-bold text-[#141414]">Main Course &bull; Hay-Smoked Rohan Duck Breast</h3>
-              <p class="text-xs text-[#5C5A54] mt-1">Caramelized parsnip purée, preserved spiced plum jus, and glazed baby turnips.</p>
-              <p class="text-[11px] text-[#A67C00] font-semibold mt-1.5">Pairing: 2018 Tenuta San Guido Guidalberto, Tuscany</p>
+        <div class="noir-card p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex items-start gap-5">
+            <span class="font-serif-title text-3xl font-bold text-[#C5A059] w-12 shrink-0">VI</span>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded border border-[#C5A059]/20">The Climax</span>
+                <span class="text-xs text-[#787066]">Course 06</span>
+              </div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Charred Rohan Duck with Preserved Black Cherry & Sunchoke</h3>
+              <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+                Dry-hung for 21 days, crisp skin, roasted parsnip mousseline, spiced dark cherry reduction, and duck fat brioche toast.
+              </p>
             </div>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#FAF3E3] text-[#A67C00] shrink-0">Heirloom Land</span>
+          <div class="md:text-right shrink-0 border-t md:border-t-0 md:border-l border-[#26221D] pt-4 md:pt-0 md:pl-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-[#C5A059]">Sommelier Flight</p>
+            <p class="text-xs text-[#F5EFE3] font-semibold mt-0.5">2017 Gaja Barbaresco</p>
+            <p class="text-[11px] text-[#787066]">Piedmont, Italy</p>
+          </div>
         </div>
 
-        <!-- Course 7 -->
-        <div class="savory-card p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 course-extra">
-          <div class="flex items-start gap-4">
-            <span class="font-serif-title text-2xl font-bold text-[#A67C00] w-8">07</span>
-            <div>
-              <h3 class="font-serif-title text-lg font-bold text-[#141414]">Dessert &bull; Single-Estate Cacao & Roasted Fig</h3>
-              <p class="text-xs text-[#5C5A54] mt-1">Warm dark chocolate souffle cake, roasted mission fig compote, and fior di latte gelato.</p>
-              <p class="text-[11px] text-[#A67C00] font-semibold mt-1.5">Pairing: 20 Year Old Tawny Port, Quinta do Noval</p>
+        <!-- Course 7: (Hidden in 5-course) -->
+        <div class="noir-card p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 extra-deg-course">
+          <div class="flex items-start gap-5">
+            <span class="font-serif-title text-3xl font-bold text-[#C5A059] w-12 shrink-0">VII</span>
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-[#C5A059] bg-[#C5A059]/10 px-2 py-0.5 rounded border border-[#C5A059]/20">Sweet Nocturne</span>
+                <span class="text-xs text-[#787066]">Course 07</span>
+              </div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Smoked Tonka Bean Soufflé & Raw Honey Ice Cream</h3>
+              <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+                Wild South American tonka bean, dark single-estate 74% cocoa nib crust, served with wildflower comb honey gelato.
+              </p>
             </div>
           </div>
-          <span class="text-xs font-semibold px-2.5 py-1 rounded bg-[#FAF3E3] text-[#A67C00] shrink-0">Finale</span>
+          <div class="md:text-right shrink-0 border-t md:border-t-0 md:border-l border-[#26221D] pt-4 md:pt-0 md:pl-6">
+            <p class="text-[11px] uppercase tracking-wider font-bold text-[#C5A059]">Sommelier Flight</p>
+            <p class="text-xs text-[#F5EFE3] font-semibold mt-0.5">1998 Château Suduiraut Sauternes</p>
+            <p class="text-[11px] text-[#787066]">Bordeaux, France</p>
+          </div>
         </div>
 
       </div>
 
-      <!-- Action Button -->
-      <div class="text-center mt-12">
-        <button onclick="openBookingDrawer()" class="btn-savory-primary">
-          Reserve This Tasting Experience &rarr;
+      <!-- Action Card -->
+      <div class="mt-12 text-center">
+        <button onclick="openBookingDrawer()" class="btn-gold-luxury !h-14 !px-8 text-sm">
+          Reserve Seating for Tasting Journey &rarr;
         </button>
       </div>
 
     </div>
   </section>
 
-  <!-- Cellar & Sommelier Section -->
-  <section id="cellar" class="py-20 lg:py-28 bg-[#FDFBF7] paper-grain border-b border-[#E8E0D0]">
+  <!-- Interactive Sommelier Vault & Cellar List -->
+  <section id="sommelier" class="py-20 lg:py-28 bg-[#090807] border-b border-[#1E1B18]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-6 space-y-6">
-          <span class="inline-block text-xs font-bold uppercase tracking-[0.16em] text-[#A67C00]">THE CELLAR COLLECTION</span>
-          <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] leading-[1.12]">
-            Curated vintages with stories of <i class="text-[#A67C00] font-normal">soil</i> and hands.
+        <div class="lg:col-span-5 space-y-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#C5A059]">THE SUBTERRANEAN VAULT</span>
+          <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5EFE3] leading-[1.12]">
+            Rare allocations and <i class="text-[#C5A059] font-normal">living</i> vintages.
           </h2>
-          <p class="text-sm sm:text-base text-[#5C5A54] leading-relaxed font-normal">
-            Our sommelier works directly with small biodynamic producers across France, Italy, and emerging Indian micro-vineyards. Every bottle in our subterranean cellar is temperature regulated at 13°C and 70% humidity.
+          <p class="text-sm sm:text-base text-[#B5ABA0] leading-relaxed font-normal">
+            Under the guidance of Head Sommelier Éléonore Martin, our cellar preserves rare biodynamic library releases from the limestone slopes of Burgundy to the volcanic volcanic soils of Mount Etna.
           </p>
 
-          <div class="space-y-4 pt-2">
-            <div class="p-4 rounded-xl bg-[#FFFFFF] border border-[#E8E0D0]">
-              <p class="text-xs font-bold text-[#141414]">Sommelier Reserve Flight</p>
-              <p class="text-xs text-[#5C5A54] mt-0.5">Four rare library selections poured and explained tableside by head sommelier Marie Delacroix.</p>
+          <div class="space-y-3 pt-2">
+            <div class="p-4 rounded-xl bg-[#161412] border border-[#26221D]">
+              <p class="text-xs font-bold text-[#F5EFE3]">Grand Cru Reserve Pairing (&plus;&#8377;3,200)</p>
+              <p class="text-xs text-[#B5ABA0] mt-0.5">Poured from museum bottles, including aged Meursault and Premier Cru Barolo.</p>
             </div>
-            <div class="p-4 rounded-xl bg-[#FFFFFF] border border-[#E8E0D0]">
-              <p class="text-xs font-bold text-[#141414]">Zero-Proof Botanical Pairings</p>
-              <p class="text-xs text-[#5C5A54] mt-0.5">House-pressed cold shrubs, cold-brew rare teas, and fermented floral sodas crafted in sync with each course.</p>
+            <div class="p-4 rounded-xl bg-[#161412] border border-[#26221D]">
+              <p class="text-xs font-bold text-[#F5EFE3]">Zero-Proof Botanical Infusions (&plus;&#8377;1,800)</p>
+              <p class="text-xs text-[#B5ABA0] mt-0.5">Cold-pressed shrubs, fermented silver needle white teas, and smoked fruit sodas.</p>
             </div>
           </div>
 
           <div class="pt-4">
-            <button onclick="openBookingDrawer()" class="btn-savory-secondary">
-              Inquire About Cellar Buyouts &rarr;
+            <button onclick="openBookingDrawer('Cellar Consultation')" class="btn-noir-luxury">
+              Request Sommelier Consultation &rarr;
             </button>
           </div>
         </div>
 
-        <div class="lg:col-span-6">
-          <div class="rounded-2xl overflow-hidden border border-[#E8E0D0] shadow-md">
-            <img 
-              src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1000&q=80" 
-              alt="Wine cellar and tasting glass" 
-              class="w-full h-[460px] object-cover"
-            />
+        <!-- Interactive Cellar Catalog Preview -->
+        <div class="lg:col-span-7 bg-[#161412] border border-[#26221D] rounded-2xl p-6 sm:p-8 space-y-6">
+          <div class="flex items-center justify-between border-b border-[#26221D] pb-4">
+            <div>
+              <h3 class="font-serif-title text-xl font-bold text-[#F5EFE3]">Cellar Allocations</h3>
+              <p class="text-xs text-[#787066]">Curated from 380+ bottles stored at 12°C</p>
+            </div>
+            <span class="text-xs font-bold text-[#C5A059] bg-[#C5A059]/10 px-2.5 py-1 rounded border border-[#C5A059]/30">Spring 2026 List</span>
           </div>
+
+          <!-- Wine Cards -->
+          <div class="space-y-3">
+            <div class="p-4 rounded-xl bg-[#0E0D0B] border border-[#26221D] flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold text-[#F5EFE3]">2019 Domaine Coche-Dury Meursault</p>
+                <p class="text-[11px] text-[#787066]">Chardonnay &bull; Côte de Beaune, France</p>
+              </div>
+              <span class="font-serif-title text-sm font-bold text-[#C5A059]">&#8377;24,000 / btl</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#0E0D0B] border border-[#26221D] flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold text-[#F5EFE3]">2016 Domaine Dujac Clos de la Roche Grand Cru</p>
+                <p class="text-[11px] text-[#787066]">Pinot Noir &bull; Morey-Saint-Denis, France</p>
+              </div>
+              <span class="font-serif-title text-sm font-bold text-[#C5A059]">&#8377;42,000 / btl</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#0E0D0B] border border-[#26221D] flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold text-[#F5EFE3]">2015 Tenuta San Guido Sassicaia</p>
+                <p class="text-[11px] text-[#787066]">Cabernet Sauvignon &bull; Bolgheri, Tuscany</p>
+              </div>
+              <span class="font-serif-title text-sm font-bold text-[#C5A059]">&#8377;36,500 / btl</span>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#0E0D0B] border border-[#26221D] flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs font-bold text-[#F5EFE3]">2020 Egon Müller Scharzhofberger Kabinett</p>
+                <p class="text-[11px] text-[#787066]">Riesling &bull; Mosel Valley, Germany</p>
+              </div>
+              <span class="font-serif-title text-sm font-bold text-[#C5A059]">&#8377;18,000 / btl</span>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-[#787066] text-center pt-2">
+            Corkage policy: Two 750ml bottles per party permitted with 48 hours notice.
+          </p>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- Private Dining Rooms -->
-  <section id="private-dining" class="py-20 lg:py-28 bg-[#FFFFFF] border-b border-[#E8E0D0]">
+  <!-- Private Dining Salons -->
+  <section id="salons" class="py-20 lg:py-28 bg-[#0E0D0B] border-b border-[#1E1B18]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="inline-block text-xs font-bold uppercase tracking-[0.16em] text-[#A67C00] mb-2">EXCLUSIVE GATHERINGS</span>
-        <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] tracking-tight">
-          Private salons for <i class="text-[#A67C00] font-normal">cherished</i> celebrations.
+        <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#C5A059] mb-2">EXCLUSIVE SALONS</span>
+        <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5EFE3] tracking-tight">
+          Intimate rooms for <i class="text-[#C5A059] font-normal">discreet</i> evenings.
         </h2>
-        <p class="text-sm text-[#5C5A54] mt-2">Custom menus, dedicated culinary attendants, and complete discretion.</p>
+        <p class="text-sm text-[#B5ABA0] mt-2">Dedicated culinary attendants, bespoke wine pairings, and complete discretion.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Room 1 -->
-        <div class="savory-card overflow-hidden">
+        <!-- Salon 1 -->
+        <div class="noir-card overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
-            alt="The Garden Pavilion Private Dining" 
-            class="w-full h-56 object-cover"
+            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80" 
+            alt="The Obsidian Chamber Private Room" 
+            class="w-full h-64 object-cover filter brightness-[0.7]"
           />
-          <div class="p-6 space-y-3">
+          <div class="p-6 sm:p-8 space-y-3">
             <div class="flex items-center justify-between">
-              <h3 class="font-serif-title text-xl font-bold text-[#141414]">The Garden Pavilion</h3>
-              <span class="text-xs font-bold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded">Up to 12 Guests</span>
+              <h3 class="font-serif-title text-2xl font-bold text-[#F5EFE3]">The Obsidian Chamber</h3>
+              <span class="text-xs font-bold text-[#C5A059] bg-[#C5A059]/10 px-3 py-1 rounded border border-[#C5A059]/30">Up to 10 Patrons</span>
             </div>
-            <p class="text-xs text-[#5C5A54] leading-relaxed">
-              Enclosed glass salon surrounded by fragrant jasmine and olive trees. Features independent audio controls and private patio access.
+            <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+              Enclosed behind sound-dampened smoked glass doors. Accompanied by a dedicated sommelier, private coat room, and personalized printed menus for each guest.
             </p>
-            <div class="pt-3 border-t border-[#E8E0D0]">
-              <button onclick="openBookingDrawer('Garden Pavilion')" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
-                Check Pavilion Availability &rarr;
+            <div class="pt-4 border-t border-[#26221D] flex items-center justify-between">
+              <span class="text-xs text-[#787066]">Minimum Spend: &#8377;45,000</span>
+              <button onclick="openBookingDrawer('Obsidian Chamber')" class="text-xs font-bold text-[#DFBA6B] hover:text-white inline-flex items-center gap-1 transition-colors">
+                Reserve Chamber &rarr;
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Room 2 -->
-        <div class="savory-card overflow-hidden">
+        <!-- Salon 2 -->
+        <div class="noir-card overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" 
-            alt="The Sommelier Vault Dining" 
-            class="w-full h-56 object-cover"
+            src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1000&q=80" 
+            alt="The Wine Vault Cellar Table" 
+            class="w-full h-64 object-cover filter brightness-[0.7]"
           />
-          <div class="p-6 space-y-3">
+          <div class="p-6 sm:p-8 space-y-3">
             <div class="flex items-center justify-between">
-              <h3 class="font-serif-title text-xl font-bold text-[#141414]">The Sommelier Vault</h3>
-              <span class="text-xs font-bold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded">Up to 18 Guests</span>
+              <h3 class="font-serif-title text-2xl font-bold text-[#F5EFE3]">The Sommelier Vault Table</h3>
+              <span class="text-xs font-bold text-[#C5A059] bg-[#C5A059]/10 px-3 py-1 rounded border border-[#C5A059]/30">Up to 16 Patrons</span>
             </div>
-            <p class="text-xs text-[#5C5A54] leading-relaxed">
-              Subterranean stone chamber surrounded by our museum wine collection. Includes a private open plating counter where our chefs finish dishes live.
+            <p class="text-xs sm:text-sm text-[#B5ABA0] leading-relaxed">
+              Dine inside our underground library cellar surrounded by 380 vintage bottles. Features a center marble counter where our chefs carve and finish courses live.
             </p>
-            <div class="pt-3 border-t border-[#E8E0D0]">
-              <button onclick="openBookingDrawer('Sommelier Vault')" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
-                Check Vault Availability &rarr;
+            <div class="pt-4 border-t border-[#26221D] flex items-center justify-between">
+              <span class="text-xs text-[#787066]">Minimum Spend: &#8377;70,000</span>
+              <button onclick="openBookingDrawer('Sommelier Vault Table')" class="text-xs font-bold text-[#DFBA6B] hover:text-white inline-flex items-center gap-1 transition-colors">
+                Reserve Vault &rarr;
               </button>
             </div>
           </div>
@@ -473,130 +588,142 @@
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="py-20 lg:py-24 bg-[#111111] text-[#FDFBF7] relative">
+  <!-- Final Nocturne Call to Action -->
+  <section class="py-24 bg-[#080706] text-[#F5EFE3] relative border-b border-[#1E1B18]">
     <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
-      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#A67C00]">TABLE RESERVATIONS</span>
-      <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-        Join us for an evening of <i class="text-[#A67C00] font-normal">quiet</i> artistry.
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.25em] text-[#C5A059]">SEATINGS BY ADVANCE ALLOCATION</span>
+      <h2 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+        Join us for an evening of <i class="text-[#C5A059] font-normal">sublime</i> quietude.
       </h2>
-      <p class="text-sm sm:text-base text-neutral-300 max-w-xl mx-auto font-normal leading-relaxed">
-        Seating is limited to ensure personalized attention for every table. We recommend reserving at least 5 to 7 days ahead for weekend seatings.
+      <p class="text-base sm:text-lg text-[#B5ABA0] max-w-xl mx-auto font-normal leading-relaxed">
+        With only 28 seats each evening, reservations are released on the 1st of every month for the following 30 days.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-        <button onclick="openBookingDrawer()" class="h-[52px] px-8 rounded-xl bg-[#A67C00] hover:bg-[#8A6500] text-white font-semibold text-sm transition-all inline-flex items-center gap-2">
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-6">
+        <button onclick="openBookingDrawer()" class="btn-gold-luxury !h-14 !px-8 text-sm">
           Reserve Seating Online &rarr;
         </button>
-        <a href="https://wa.me/918140557546?text=Hi%20Savory%20Fine%20Dining,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="h-[52px] px-8 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-sm transition-all inline-flex items-center gap-2">
-          Contact Concierge on WhatsApp &rarr;
+        <a href="https://wa.me/918140557546?text=Hi%20SAVORY%20Fine%20Dining,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." target="_blank" rel="noopener noreferrer" class="btn-noir-luxury !h-14 !px-8 text-sm">
+          Concierge WhatsApp Desk &rarr;
         </a>
+      </div>
+
+      <div class="pt-10 text-xs text-[#787066] flex flex-wrap items-center justify-center gap-6">
+        <span>&bull; Formal Evening Attire</span>
+        <span>&bull; Dietary Needs Accommodated with 48h Notice</span>
+        <span>&bull; Private Valet Attendant</span>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-[#0D0D0D] text-[#A8A8A8] text-xs py-14 border-t border-[#222222]">
+  <!-- Nocturne Footer -->
+  <footer class="bg-[#050404] text-[#787066] text-xs py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
       
       <div class="space-y-3">
         <span class="font-serif-title text-2xl font-bold text-white tracking-tight">SAVORY</span>
-        <p class="text-xs text-neutral-400 leading-relaxed">
-          Artisanal dining, seasonal degustations, and rare vintages. Built as a luxury fine dining live demo by Best Minders.
+        <p class="text-xs text-[#B5ABA0] leading-relaxed">
+          Michelin-grade seasonal tasting menus, subterranean cellar allocations, and discrete salons. Built as a luxury fine dining live demo by Best Minders.
         </p>
-        <p class="text-[11px] text-neutral-500">&copy; 2026 Savory Fine Dining. All rights reserved.</p>
+        <p class="text-[11px] text-[#787066]">&copy; 2026 SAVORY Artisanal Dining. All rights reserved.</p>
       </div>
 
       <div class="space-y-2">
-        <p class="text-xs font-bold text-white uppercase tracking-wider">Tasting Hours</p>
-        <p class="text-neutral-400">Wednesday to Sunday: 7:00 PM &ndash; 11:00 PM</p>
-        <p class="text-neutral-400">Weekend Lunch Seating: 12:30 PM &ndash; 3:00 PM</p>
-        <p class="text-amber-500 font-semibold">Monday & Tuesday Closed for Foraging</p>
+        <p class="text-xs font-bold text-white uppercase tracking-wider">Seating Times</p>
+        <p class="text-[#B5ABA0]">Wednesday to Sunday</p>
+        <p class="text-[#B5ABA0]">First Seating: 7:00 PM</p>
+        <p class="text-[#B5ABA0]">Second Seating: 8:45 PM</p>
+        <p class="text-[#C5A059] font-medium">Monday & Tuesday Closed for Cellar Inventory</p>
       </div>
 
       <div class="space-y-2">
-        <p class="text-xs font-bold text-white uppercase tracking-wider">Inquiries & Location</p>
-        <p class="text-neutral-400">Courtyard Pavilion, Heritage Quarter</p>
-        <p class="text-neutral-400">Phone: +91 81405 57546</p>
-        <p class="text-neutral-400">Email: dining@bestminders.com</p>
+        <p class="text-xs font-bold text-white uppercase tracking-wider">Concierge Inquiries</p>
+        <p class="text-[#B5ABA0]">The Heritage Pavilion, 4th Crossway</p>
+        <p class="text-[#B5ABA0]">Telephone: +91 81405 57546</p>
+        <p class="text-[#B5ABA0]">Email: concierge@bestminders.com</p>
       </div>
 
       <div class="space-y-3">
-        <p class="text-xs font-bold text-white uppercase tracking-wider">Website Prototype</p>
-        <p class="text-neutral-400">Ready to build a website that captures your brand caliber?</p>
-        <a href="https://bestminders.github.io/" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold">
-          Explore Best Minders Studio &rarr;
+        <p class="text-xs font-bold text-white uppercase tracking-wider">Studio Prototype</p>
+        <p class="text-[#B5ABA0]">Need a bespoke dark luxury digital presence for your flagship restaurant?</p>
+        <a href="https://bestminders.github.io/" class="inline-flex items-center gap-1.5 text-[#C5A059] hover:text-white font-semibold">
+          Explore Best Minders Agency &rarr;
         </a>
       </div>
 
     </div>
   </footer>
 
-  <!-- Booking Modal / Drawer -->
+  <!-- Concierge Reservation Modal -->
   <div id="booking-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-      <div class="fixed inset-0 bg-black/60 transition-opacity" onclick="closeBookingDrawer()"></div>
+      <div class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="closeBookingDrawer()"></div>
       <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
 
-      <div class="inline-block align-bottom bg-[#FDFBF7] rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-[#E8E0D0]">
-        <div class="p-6 sm:p-8 bg-[#FFFFFF] border-b border-[#E8E0D0] flex items-center justify-between">
+      <div class="inline-block align-bottom bg-[#161412] rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-[#C5A059]/40">
+        <div class="p-6 sm:p-8 bg-[#0E0D0B] border-b border-[#26221D] flex items-center justify-between">
           <div>
-            <span class="text-[11px] uppercase tracking-wider font-bold text-[#A67C00]">SAVORY ARTISANAL DINING</span>
-            <h3 class="font-serif-title text-2xl font-bold text-[#141414]">Reserve Your Table</h3>
+            <span class="text-[11px] uppercase tracking-widest font-bold text-[#C5A059]">SAVORY CONCIERGE</span>
+            <h3 class="font-serif-title text-2xl font-bold text-white">Reserve Tasting Table</h3>
           </div>
-          <button onclick="closeBookingDrawer()" class="text-2xl leading-none text-[#5C5A54] hover:text-[#141414]">&times;</button>
+          <button onclick="closeBookingDrawer()" class="text-2xl leading-none text-[#B5ABA0] hover:text-white">&times;</button>
         </div>
 
         <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="p-6 sm:p-8 space-y-4">
           <div>
-            <label class="block text-xs font-bold text-[#141414] mb-1">Guest Name</label>
-            <input type="text" id="sav-name" required placeholder="e.g. Meera Kapoor" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+            <label class="block text-xs font-bold text-[#B5ABA0] mb-1">Patron Full Name</label>
+            <input type="text" id="sav-name" required placeholder="e.g. Vikramaditya Birla" class="w-full px-3.5 py-2.5 rounded-xl border border-[#26221D] bg-[#0E0D0B] text-sm text-white focus:outline-none focus:border-[#C5A059]">
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#141414] mb-1">Date</label>
-              <input type="date" id="sav-date" required class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+              <label class="block text-xs font-bold text-[#B5ABA0] mb-1">Evening Date</label>
+              <input type="date" id="sav-date" required class="w-full px-3.5 py-2.5 rounded-xl border border-[#26221D] bg-[#0E0D0B] text-sm text-white focus:outline-none focus:border-[#C5A059]">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#141414] mb-1">Tasting Menu Tier</label>
-              <select id="sav-tier" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+              <label class="block text-xs font-bold text-[#B5ABA0] mb-1">Seating Time</label>
+              <select id="sav-time" class="w-full px-3.5 py-2.5 rounded-xl border border-[#26221D] bg-[#0E0D0B] text-sm text-white focus:outline-none focus:border-[#C5A059]">
+                <option>First Seating (7:00 PM)</option>
+                <option>Second Seating (8:45 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#B5ABA0] mb-1">Degustation Flight</label>
+              <select id="sav-tier" class="w-full px-3.5 py-2.5 rounded-xl border border-[#26221D] bg-[#0E0D0B] text-sm text-white focus:outline-none focus:border-[#C5A059]">
                 <option>7-Course Grand Tasting</option>
                 <option>5-Course Signature Tasting</option>
-                <option>Chef's Private Counter (Special)</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-bold text-[#141414] mb-1">Guests</label>
-              <select id="sav-guests" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
-                <option>2 Guests</option>
-                <option>4 Guests</option>
-                <option>6 Guests</option>
-                <option>Garden Pavilion (Up to 12)</option>
-                <option>Sommelier Vault (Up to 18)</option>
               </select>
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#141414] mb-1">Wine Pairing Option</label>
-              <select id="sav-pairing" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
-                <option>Sommelier Reserve Pairings</option>
-                <option>Zero-Proof Botanical Pairings</option>
-                <option>Bottle Selection at Table</option>
+              <label class="block text-xs font-bold text-[#B5ABA0] mb-1">Table / Salon Selection</label>
+              <select id="sav-room" class="w-full px-3.5 py-2.5 rounded-xl border border-[#26221D] bg-[#0E0D0B] text-sm text-white focus:outline-none focus:border-[#C5A059]">
+                <option>Main Dining Room (2-4 Patrons)</option>
+                <option>The Obsidian Chamber (Up to 10)</option>
+                <option>The Sommelier Vault (Up to 16)</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-[#141414] mb-1">Dietary Restrictions or Occasion</label>
-            <input type="text" id="sav-diet" placeholder="e.g. Pescatarian, anniversary dinner" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+            <label class="block text-xs font-bold text-[#B5ABA0] mb-1">Sommelier Cellar Pairing</label>
+            <select id="sav-pairing" class="w-full px-3.5 py-2.5 rounded-xl border border-[#26221D] bg-[#0E0D0B] text-sm text-white focus:outline-none focus:border-[#C5A059]">
+              <option>Grand Cru Reserve Pairings (&plus;&#8377;3,200)</option>
+              <option>Zero-Proof Botanical Infusions (&plus;&#8377;1,800)</option>
+              <option>A La Carte Cellar Selection on Evening</option>
+            </select>
           </div>
 
-          <div class="pt-2">
-            <button type="submit" class="w-full btn-savory-primary !h-12 !text-xs font-bold">
-              Dispatch Reservation via WhatsApp &rarr;
+          <div>
+            <label class="block text-xs font-bold text-[#B5ABA0] mb-1">Dietary Allergies or Special Occasion</label>
+            <input type="text" id="sav-notes" placeholder="e.g. Shellfish allergy, anniversary dinner" class="w-full px-3.5 py-2.5 rounded-xl border border-[#26221D] bg-[#0E0D0B] text-sm text-white focus:outline-none focus:border-[#C5A059]">
+          </div>
+
+          <div class="pt-3">
+            <button type="submit" class="w-full btn-gold-luxury !h-12 !text-xs uppercase tracking-wider">
+              Transmit Reservation to Concierge &rarr;
             </button>
           </div>
         </form>
@@ -604,19 +731,19 @@
     </div>
   </div>
 
-  <!-- Floating WhatsApp Widget -->
+  <!-- Floating Concierge WhatsApp Widget -->
   <aside aria-label="WhatsApp quick chat" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
-    <div id="wa-bubble-sav" class="bg-[#111111] text-[#FDFBF7] text-xs font-medium px-3.5 py-2 rounded-2xl shadow-xl border border-[#A67C00]/40 flex items-center gap-2">
+    <div id="wa-bubble-sav" class="bg-[#161412] text-[#F5EFE3] text-xs font-medium px-3.5 py-2 rounded-2xl shadow-2xl border border-[#C5A059]/50 flex items-center gap-2">
       <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
       <span>Inquire with Sommelier Concierge</span>
-      <button onclick="document.getElementById('wa-bubble-sav').style.display='none'" class="text-neutral-400 hover:text-white text-sm ml-1">&times;</button>
+      <button onclick="document.getElementById('wa-bubble-sav').style.display='none'" class="text-[#787066] hover:text-white text-sm ml-1">&times;</button>
     </div>
     <a 
-      href="https://wa.me/918140557546?text=Hi%20Savory%20Fine%20Dining,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." 
+      href="https://wa.me/918140557546?text=Hi%20SAVORY%20Fine%20Dining,%20I%20would%20like%20to%20inquire%20about%20a%20table%20reservation." 
       target="_blank" 
       rel="noopener noreferrer" 
-      class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-105 transition-transform" 
-      aria-label="Direct WhatsApp Reservation"
+      class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-105 transition-transform" 
+      aria-label="Direct WhatsApp Concierge"
     >
       <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.186 1.564 5.942l-1.564 5.709 5.856-1.536c1.701.928 3.652 1.455 5.728 1.455 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
     </a>
@@ -624,31 +751,31 @@
 
   <!-- JavaScript Interactivity -->
   <script>
-    function switchTasting(tier) {
-      const btnSeven = document.getElementById('btn-seven');
-      const btnFive = document.getElementById('btn-five');
-      const extras = document.querySelectorAll('.course-extra');
+    function toggleDegustation(tier) {
+      const btnGrand = document.getElementById('btn-deg-grand');
+      const btnSig = document.getElementById('btn-deg-sig');
+      const extraCourses = document.querySelectorAll('.extra-deg-course');
 
-      if (tier === 'seven') {
-        btnSeven.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#111111] text-white";
-        btnFive.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]";
-        extras.forEach(el => el.classList.remove('hidden'));
+      if (tier === 'grand') {
+        btnGrand.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#C5A059] text-[#0E0D0B]";
+        btnSig.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-transparent text-[#B5ABA0] hover:text-white";
+        extraCourses.forEach(el => el.classList.remove('hidden'));
       } else {
-        btnFive.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#111111] text-white";
-        btnSeven.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]";
-        extras.forEach(el => el.classList.add('hidden'));
+        btnSig.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#C5A059] text-[#0E0D0B]";
+        btnGrand.className = "px-6 py-2.5 rounded-xl text-xs font-bold transition-all bg-transparent text-[#B5ABA0] hover:text-white";
+        extraCourses.forEach(el => el.classList.add('hidden'));
       }
     }
 
-    function openBookingDrawer(roomPreference = '') {
+    function openBookingDrawer(roomPref = '') {
       const modal = document.getElementById('booking-modal');
       modal.classList.remove('hidden');
-      if (roomPreference) {
-        const guestSelect = document.getElementById('sav-guests');
-        if (roomPreference.includes('Pavilion')) {
-          guestSelect.value = 'Garden Pavilion (Up to 12)';
-        } else if (roomPreference.includes('Vault')) {
-          guestSelect.value = 'Sommelier Vault (Up to 18)';
+      if (roomPref) {
+        const select = document.getElementById('sav-room');
+        if (roomPref.includes('Obsidian')) {
+          select.value = 'The Obsidian Chamber (Up to 10)';
+        } else if (roomPref.includes('Vault')) {
+          select.value = 'The Sommelier Vault (Up to 16)';
         }
       }
     }
@@ -661,12 +788,13 @@
       e.preventDefault();
       const name = document.getElementById('sav-name').value;
       const date = document.getElementById('sav-date').value;
+      const time = document.getElementById('sav-time').value;
       const tier = document.getElementById('sav-tier').value;
-      const guests = document.getElementById('sav-guests').value;
+      const room = document.getElementById('sav-room').value;
       const pairing = document.getElementById('sav-pairing').value;
-      const diet = document.getElementById('sav-diet').value || 'None';
+      const notes = document.getElementById('sav-notes').value || 'None';
 
-      const text = `Hi Savory Fine Dining, I would like to reserve a tasting table.%0A%0A*Guest Name:* ${encodeURIComponent(name)}%0A*Date:* ${encodeURIComponent(date)}%0A*Journey:* ${encodeURIComponent(tier)}%0A*Guests:* ${encodeURIComponent(guests)}%0A*Pairing:* ${encodeURIComponent(pairing)}%0A*Special Notes:* ${encodeURIComponent(diet)}`;
+      const text = `Hi SAVORY Artisanal Dining,%20I%20would%20like%20to%20reserve%20a%20degustation%20table.%0A%0A*Patron:*%20${encodeURIComponent(name)}%0A*Date:*%20${encodeURIComponent(date)}%0A*Time:*%20${encodeURIComponent(time)}%0A*Flight:*%20${encodeURIComponent(tier)}%0A*Room:*%20${encodeURIComponent(room)}%0A*Pairing:*%20${encodeURIComponent(pairing)}%0A*Notes:*%20${encodeURIComponent(notes)}`;
 
       window.open(`https://wa.me/918140557546?text=${text}`, '_blank');
       closeBookingDrawer();
