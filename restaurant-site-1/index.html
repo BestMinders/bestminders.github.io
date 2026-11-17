@@ -1,92 +1,925 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/restaurant-site-1/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Title & Description -->
-    <title>EMBER | Fine Dining & Hearth — BestMinders</title>
-    <meta
-      name="description"
-      content="Explore EMBER, an artisanal fine dining restaurant website concept by BestMinders featuring wood-fired cuisine, QR table ordering, interactive menus, and chef showcases."
-    />
-    <link rel="canonical" href="https://bestminders.github.io/restaurant-site-1/" />
-    <meta name="robots" content="index, follow" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMBER | Fine Dining & Wood-Fired Hearth</title>
+  <meta name="description" content="EMBER is an artisanal wood-fired restaurant. Open-flame cooking, dry-aged cuts, local farm produce, and private table reservations.">
+  <link rel="canonical" href="https://bestminders.github.io/restaurant-site-1/">
+  <link rel="icon" type="image/png" href="/favicon.png">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="EMBER | Fine Dining & Hearth — BestMinders"
-    />
-    <meta
-      property="og:description"
-      content="Explore EMBER, an artisanal fine dining restaurant website concept by BestMinders featuring wood-fired cuisine, QR table ordering, interactive menus, and chef showcases."
-    />
-    <meta
-      property="og:url"
-      content="https://bestminders.github.io/restaurant-site-1/"
-    />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="EMBER | Fine Dining & Hearth — BestMinders"
-    />
-    <meta
-      name="twitter:description"
-      content="Explore EMBER, an artisanal fine dining restaurant website concept by BestMinders."
-    />
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Structured Data (JSON-LD WebPage/CreativeWork) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "EMBER | Fine Dining & Hearth",
-      "description": "An artisanal fine dining restaurant website concept created by BestMinders to showcase modern restaurant digital experiences.",
-      "url": "https://bestminders.github.io/restaurant-site-1/",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "BestMinders",
-        "url": "https://bestminders.github.io/"
-      },
-      "about": {
-        "@type": "CreativeWork",
-        "name": "EMBER Restaurant Website Concept",
-        "creator": {
-          "@type": "Organization",
-          "name": "BestMinders",
-          "url": "https://bestminders.github.io/"
+  <!-- Google Fonts: Fraunces (Headlines) & Manrope (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FDFBF7',
+            cream: '#F5EFE3',
+            ink: '#111111',
+            charcoal: '#1C1C1C',
+            borderWarm: '#E8E0D0',
+            brandText: {
+              primary: '#141414',
+              secondary: '#5C5A54',
+              muted: '#A8A8A8'
+            },
+            emberGold: {
+              DEFAULT: '#A67C00',
+              hover: '#8A6500',
+              light: '#FAF3E3'
+            }
+          },
+          fontFamily: {
+            serif: ['"Fraunces"', 'Georgia', 'serif'],
+            sans: ['"Manrope"', '-apple-system', 'sans-serif']
+          }
         }
       }
     }
-    </script>
-    <script type="module" crossorigin src="/restaurant-site-1/assets/index-DokWoQ9U.js"></script>
-    <link rel="stylesheet" crossorigin href="/restaurant-site-1/assets/index-BWtHfbPR.css">
-  </head>
-  <body class="bg-white text-gray-900 font-sans antialiased selection:bg-amber-500 selection:text-black overflow-x-hidden">
-    <div id="root"></div>
-      <!-- Floating Restaurant WhatsApp Widget -->
-    <aside aria-label="WhatsApp quick chat" style="position:fixed; bottom:24px; right:24px; z-index:9999; display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
-      <div id="wa-bubble-resto1" style="background:#1c1917; color:#f5f5f4; font-size:12px; font-weight:600; padding:8px 14px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.6); border:1px solid rgba(245,158,11,0.3); display:flex; align-items:center; gap:8px;">
-        <span style="width:8px; height:8px; border-radius:50%; background:#10b981; display:inline-block;"></span>
-        <span>EMBER Dining: Table & Catering WhatsApp</span>
-        <button onclick="document.getElementById('wa-bubble-resto1').style.display='none'" style="background:none; border:none; color:#a8a29e; font-size:16px; cursor:pointer; line-height:1; margin-left:4px;">&times;</button>
+  </script>
+  <style>
+    body {
+      background-color: #FDFBF7;
+      color: #141414;
+      font-family: 'Manrope', -apple-system, sans-serif;
+    }
+    .font-serif-title {
+      font-family: 'Fraunces', Georgia, serif;
+    }
+    .paper-grain {
+      background-image: radial-gradient(rgba(17, 17, 17, 0.04) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .resto-card {
+      background: #FFFFFF;
+      border: 1px solid #E8E0D0;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px -2px rgba(17, 17, 17, 0.04);
+      transition: all 0.25s ease-in-out;
+    }
+    .resto-card:hover {
+      border-color: #A67C00;
+      box-shadow: 0 10px 24px -4px rgba(166, 124, 0, 0.15);
+      transform: translateY(-2px);
+    }
+    .btn-resto-primary {
+      height: 52px;
+      border-radius: 12px;
+      background-color: #111111;
+      color: #FFFFFF;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 24px;
+      transition: all 0.2s ease;
+    }
+    .btn-resto-primary:hover {
+      background-color: #A67C00;
+      color: #FFFFFF;
+    }
+    .btn-resto-secondary {
+      height: 52px;
+      border-radius: 12px;
+      background-color: #F5EFE3;
+      border: 1px solid #E8E0D0;
+      color: #141414;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 24px;
+      transition: all 0.2s ease;
+    }
+    .btn-resto-secondary:hover {
+      background-color: #FFFFFF;
+      border-color: #A67C00;
+      color: #A67C00;
+    }
+  </style>
+</head>
+<body class="selection:bg-amber-100 selection:text-ink antialiased">
+
+  <!-- Top Sticky Best Minders Demo Banner -->
+  <aside aria-label="Demo notice" class="bg-[#111111] text-[#FDFBF7] text-xs font-medium py-2.5 px-4 sticky top-0 z-50 border-b border-[#2A2A2A]">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="text-neutral-400">Live Client Showcase:</span>
+        <span class="font-semibold text-white">EMBER Wood-Fired Hearth & Table Ordering</span>
+        <span class="hidden sm:inline-block px-2 py-0.5 rounded bg-[#FAF3E3]/10 text-amber-300 text-[11px] font-semibold">Restaurant Demo</span>
       </div>
-      <a href="https://wa.me/918140557546?text=Hi%20EMBER%20Restaurant,%20I%20want%20to%20reserve%20a%20table%20or%20inquire%20about%20catering." target="_blank" rel="noopener noreferrer" style="width:56px; height:56px; border-radius:50%; background:#25D366; box-shadow:0 10px 25px rgba(37,211,102,0.4); display:flex; align-items:center; justify-content:center; text-decoration:none; transition:transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" aria-label="Chat on WhatsApp">
-        <svg style="width:28px; height:28px; fill:#ffffff;" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.186 1.564 5.942l-1.564 5.709 5.856-1.536c1.701.928 3.652 1.455 5.728 1.455 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
-      </a>
-    </aside>
-  
+      <div class="flex items-center gap-4 text-xs">
+        <a href="https://bestminders.github.io/" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 transition-colors font-semibold">
+          <span>&larr;</span> Back to Best Minders Studio
+        </a>
+        <a href="https://wa.me/918140557546?text=Hi%20Best%20Minders,%20I%20love%20the%20EMBER%20restaurant%20demo%20website.%20Can%20we%20build%20one%20for%20my%20restaurant%3F" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-1 text-white bg-amber-600/30 hover:bg-amber-600/50 px-2.5 py-1 rounded-md border border-amber-500/40 font-medium">
+          Get This Site For Your Restaurant &rarr;
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="bg-[#FDFBF7]/90 backdrop-blur-md sticky top-[41px] z-40 border-b border-[#E8E0D0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-[#111111] text-[#FDFBF7] flex items-center justify-center font-serif-title text-xl font-bold border border-[#A67C00]">
+          E
+        </div>
+        <div>
+          <span class="font-serif-title text-2xl font-bold tracking-tight text-[#141414] block leading-none">EMBER</span>
+          <span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-[#A67C00] block mt-1">Hearth & Kitchen</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-[#5C5A54]">
+        <a href="#about" class="hover:text-[#141414] transition-colors">Philosophy</a>
+        <a href="#menu" class="hover:text-[#141414] transition-colors">Hearth Menu</a>
+        <a href="#chef" class="hover:text-[#141414] transition-colors">Head Chef</a>
+        <a href="#experience" class="hover:text-[#141414] transition-colors">Private Dining</a>
+        <a href="#reviews" class="hover:text-[#141414] transition-colors">Guest Notes</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="toggleOrderDrawer()" class="relative p-2.5 rounded-xl bg-[#F5EFE3] border border-[#E8E0D0] text-[#141414] hover:border-[#A67C00] transition-all" aria-label="Open Cart Order">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span id="cart-counter" class="absolute -top-1.5 -right-1.5 w-5 h-5 bg-[#A67C00] text-white text-[11px] font-bold rounded-full flex items-center justify-center">0</span>
+        </button>
+        <button onclick="openReservationModal()" class="btn-resto-primary !h-11 !px-5 text-sm">
+          Reserve Table &rarr;
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative paper-grain pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden border-b border-[#E8E0D0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Editorial Headline & Actions -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF3E3] border border-[#E8E0D0] text-xs font-semibold text-[#A67C00] tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-[#A67C00]"></span>
+            WOOD-FIRED FINE DINING &bull; DINNER SERVICE FROM 6:30 PM
+          </div>
+
+          <h1 class="font-serif-title text-4xl sm:text-5xl lg:text-6xl font-bold text-[#141414] leading-[1.08] tracking-tight">
+            Live fire cooking, honest seasons, and <i class="text-[#A67C00] font-normal">unhurried</i> hospitality.
+          </h1>
+
+          <p class="text-base sm:text-lg text-[#5C5A54] leading-relaxed max-w-xl font-normal">
+            At EMBER, every cut of meat and crisp root vegetable meets iron and fire. Savor 45-day dry-aged steaks, wood-fired hearth flatbreads, and sommelier-curated natural wines in an intimate, candlelit dining room.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <button onclick="openReservationModal()" class="btn-resto-primary">
+              Book Your Table Online &rarr;
+            </button>
+            <a href="#menu" class="btn-resto-secondary">
+              Explore Hearth Menu
+            </a>
+          </div>
+
+          <!-- Micro Trust Stats -->
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-[#E8E0D0]/80">
+            <div>
+              <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#141414]">800°C</p>
+              <p class="text-xs text-[#5C5A54] font-medium mt-0.5">Custom Iron Hearth</p>
+            </div>
+            <div>
+              <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#141414]">45-Day</p>
+              <p class="text-xs text-[#5C5A54] font-medium mt-0.5">Dry Aging Chamber</p>
+            </div>
+            <div>
+              <p class="font-serif-title text-2xl sm:text-3xl font-bold text-[#141414]">4.9 / 5</p>
+              <p class="text-xs text-[#5C5A54] font-medium mt-0.5">Over 1,200 Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Composition with Card Tilt -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-2xl overflow-hidden border border-[#E8E0D0] shadow-xl lg:rotate-[0.8deg] hover:rotate-0 transition-transform duration-300">
+            <img 
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" 
+              alt="EMBER Open Flame Cooking and Table Atmosphere" 
+              class="w-full h-[440px] sm:h-[500px] object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full bg-[#A67C00] text-xs font-bold tracking-wider uppercase">Today's Hearth Special</span>
+              <h3 class="font-serif-title text-2xl font-bold leading-snug">Oak-Smoked Wagyu Ribeye with Fermented Garlic Glaze</h3>
+              <p class="text-xs text-neutral-300">Carved tableside with charred leek emulsion & rosemary sea salt.</p>
+            </div>
+          </div>
+
+          <!-- Floating Badge -->
+          <div class="absolute -bottom-5 -left-4 sm:left-4 bg-[#FFFFFF] border border-[#E8E0D0] rounded-xl p-4 shadow-lg flex items-center gap-3">
+            <div class="w-11 h-11 rounded-lg bg-[#FAF3E3] flex items-center justify-center text-[#A67C00]">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-[#141414]">Michelin Selected 2026</p>
+              <p class="text-[11px] text-[#5C5A54]">Guide to Contemporary Wood Firing</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section with Tabs & Ordering Drawer -->
+  <section id="menu" class="py-20 lg:py-28 bg-[#FFFFFF] border-b border-[#E8E0D0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="inline-block text-xs font-bold uppercase tracking-[0.16em] text-[#A67C00] mb-2">SEASONAL MENU &bull; SPRING 2026</span>
+        <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] tracking-tight">
+          Crafted over wood, served with <i class="text-[#A67C00] font-normal">reverence</i>.
+        </h2>
+        <p class="text-sm sm:text-base text-[#5C5A54] mt-3">
+          Select dishes below to review ingredients, allergen profiles, or add directly to your live table order simulation.
+        </p>
+      </div>
+
+      <!-- Menu Category Tabs -->
+      <div class="flex items-center justify-center flex-wrap gap-2 mb-12" id="menu-tabs">
+        <button onclick="filterCategory('hearth')" id="tab-hearth" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#111111] text-white">
+          Wood-Fired Hearth
+        </button>
+        <button onclick="filterCategory('starters')" id="tab-starters" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]">
+          Small Plates & Raw
+        </button>
+        <button onclick="filterCategory('cuts')" id="tab-cuts" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]">
+          Dry-Aged Cuts
+        </button>
+        <button onclick="filterCategory('desserts')" id="tab-desserts" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]">
+          Artisanal Desserts
+        </button>
+        <button onclick="filterCategory('cellar')" id="tab-cellar" class="px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]">
+          Cellar & Pairings
+        </button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="menu-grid">
+
+        <!-- Item 1: Hearth -->
+        <div class="resto-card p-6 flex flex-col justify-between" data-category="hearth">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">Charred Spanish Octopus</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;1,450</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              Slow poached then blistered over white oak hearth. Served with smoked paprika potato foam, charred scallion oil, and caper crumbs.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded-md">Hearth Signature</span>
+            <button onclick="addToOrder('Charred Spanish Octopus', 1450)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 2: Hearth -->
+        <div class="resto-card p-6 flex flex-col justify-between" data-category="hearth">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">Wood-Fired Morel Risotto</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;1,150</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              Acquerello carnaroli rice simmered in roasted mushroom broth, finished with foraged Himalayan morels and 24-month Parmigiano Reggiano.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md">Vegetarian</span>
+            <button onclick="addToOrder('Wood-Fired Morel Risotto', 1150)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 3: Hearth -->
+        <div class="resto-card p-6 flex flex-col justify-between" data-category="hearth">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">Charcoal-Roasted Seabass</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;1,650</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              Line-caught Chilean seabass wrapped in fig leaves, roasted whole on hot embers. Fennel purée, citrus reduction, and herb salad.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded-md">Chef Choice</span>
+            <button onclick="addToOrder('Charcoal-Roasted Seabass', 1650)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 4: Starters -->
+        <div class="resto-card p-6 flex flex-col justify-between hidden" data-category="starters">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">Wagyu Beef Carpaccio</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;980</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              A5 tenderloin shaved paper-thin with pickled shallots, shaved black summer truffle, cured egg yolk shavings, and grilled sourdough.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded-md">Raw Bar</span>
+            <button onclick="addToOrder('Wagyu Beef Carpaccio', 980)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 5: Starters -->
+        <div class="resto-card p-6 flex flex-col justify-between hidden" data-category="starters">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">Burrata & Charred Peaches</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;850</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              Handcrafted Pugliese burrata, wood-caramelized stone fruit, aged balsamic glaze, and toasted pistachio dukkah.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md">Vegetarian</span>
+            <button onclick="addToOrder('Burrata & Charred Peaches', 850)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 6: Cuts -->
+        <div class="resto-card p-6 flex flex-col justify-between hidden" data-category="cuts">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">45-Day Dry-Aged Ribeye (400g)</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;3,200</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              Aged in our salt-brick room, seared over screaming mesquite embers. Bone marrow jus, roasted head of garlic, and Maldon sea salt.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded-md">Dry Aged In-House</span>
+            <button onclick="addToOrder('45-Day Dry-Aged Ribeye', 3200)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 7: Desserts -->
+        <div class="resto-card p-6 flex flex-col justify-between hidden" data-category="desserts">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">Smoked Dark Chocolate Tart</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;650</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              72% Valrhona single-origin ganache smoked with cherrywood chips, salted bourbon caramel, and Tahitian vanilla bean gelato.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded-md">Dessert Specialty</span>
+            <button onclick="addToOrder('Smoked Dark Chocolate Tart', 650)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 8: Cellar -->
+        <div class="resto-card p-6 flex flex-col justify-between hidden" data-category="cellar">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-2">
+              <h3 class="font-serif-title text-xl font-bold text-[#141414]">Hearth Smoked Old Fashioned</h3>
+              <span class="font-serif-title text-lg font-bold text-[#A67C00] shrink-0">&#8377;850</span>
+            </div>
+            <p class="text-xs text-[#5C5A54] leading-relaxed mb-4">
+              Small batch bourbon infused with charred pecan wood, organic demerara sugar, Angostura bitters, and flamed orange peel.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-[#E8E0D0] flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-[#A67C00] bg-[#FAF3E3] px-2.5 py-1 rounded-md">Signature Cocktail</span>
+            <button onclick="addToOrder('Hearth Smoked Old Fashioned', 850)" class="text-xs font-bold text-[#111111] hover:text-[#A67C00] inline-flex items-center gap-1 transition-colors">
+              + Add to Order
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- QR Ordering Interactive Simulator Box -->
+      <div class="mt-14 bg-[#F5EFE3] border border-[#E8E0D0] rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-[#FFFFFF] border border-[#E8E0D0] flex items-center justify-center text-[#A67C00] shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-serif-title text-xl font-bold text-[#141414]">Live Table Order Simulator</h4>
+            <p class="text-xs text-[#5C5A54] mt-0.5">Test how guests scan a QR code at their table, select dishes, and transmit orders instantly to the kitchen display.</p>
+          </div>
+        </div>
+        <button onclick="toggleOrderDrawer()" class="btn-resto-primary !h-11 !px-5 text-xs whitespace-nowrap">
+          Open Table Order Tray &rarr;
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Philosophy & Chef Section -->
+  <section id="about" class="py-20 lg:py-28 bg-[#FDFBF7] paper-grain border-b border-[#E8E0D0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 relative">
+          <div class="rounded-2xl overflow-hidden border border-[#E8E0D0] shadow-md">
+            <img 
+              src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=80" 
+              alt="Executive Chef preparing hearth wood cuts" 
+              class="w-full h-[480px] object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-6 -right-4 sm:right-6 bg-[#FFFFFF] border border-[#E8E0D0] p-5 rounded-xl shadow-lg max-w-xs">
+            <p class="font-serif-title text-sm italic text-[#141414] leading-relaxed">
+              "Fire takes away pretension. When food touches smoke and cast iron, there is no place to hide."
+            </p>
+            <p class="text-xs font-bold text-[#A67C00] mt-2 block">&mdash; Vikram Rathore, Head Chef</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-6">
+          <span class="inline-block text-xs font-bold uppercase tracking-[0.16em] text-[#A67C00]">KITCHEN PHILOSOPHY</span>
+          <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] leading-[1.12]">
+            Wood from fallen orchards, heritage seeds, and <i class="text-[#A67C00] font-normal">patience</i>.
+          </h2>
+          <p class="text-sm sm:text-base text-[#5C5A54] leading-relaxed font-normal">
+            We do not use gas or electric ranges for our core offerings. Every sauce reduction, sear, and bread roast occurs over glowing coals of seasoned hickory, white oak, and applewood.
+          </p>
+          
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-[#FAF3E3] text-[#A67C00] flex items-center justify-center text-xs font-bold mt-0.5">&bull;</span>
+              <div>
+                <h4 class="text-sm font-bold text-[#141414]">Zero Single-Use Plastics</h4>
+                <p class="text-xs text-[#5C5A54]">All our ingredients arrive in compostable wooden crates or glass containers from local regenerative farms.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-[#FAF3E3] text-[#A67C00] flex items-center justify-center text-xs font-bold mt-0.5">&bull;</span>
+              <div>
+                <h4 class="text-sm font-bold text-[#141414]">Hand-Thrown Stoneware</h4>
+                <p class="text-xs text-[#5C5A54]">Every plate and cup is crafted in small batches by ceramic artisans in rural Gujarat.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-5 h-5 rounded-full bg-[#FAF3E3] text-[#A67C00] flex items-center justify-center text-xs font-bold mt-0.5">&bull;</span>
+              <div>
+                <h4 class="text-sm font-bold text-[#141414]">In-House Fermentation Lab</h4>
+                <p class="text-xs text-[#5C5A54]">Koji garums, black garlic, and fruit vinegars aged 6 to 18 months for intense umami depth.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openReservationModal()" class="btn-resto-primary">
+              Reserve Your Dining Experience &rarr;
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Notes & Real Reviews -->
+  <section id="reviews" class="py-20 lg:py-28 bg-[#FFFFFF] border-b border-[#E8E0D0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-block text-xs font-bold uppercase tracking-[0.16em] text-[#A67C00] mb-2">GUEST NOTES</span>
+        <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold text-[#141414] tracking-tight">
+          Words from our <i class="text-[#A67C00] font-normal">tables</i>.
+        </h2>
+        <p class="text-sm text-[#5C5A54] mt-2">Authentic reviews from patrons who experienced our hearth dining.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Review 1 -->
+        <div class="bg-[#FDFBF7] border border-[#E8E0D0] p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-[#A67C00] mb-4">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <p class="font-serif-title text-base text-[#141414] italic leading-relaxed mb-6">
+              "The 45-day dry-aged ribeye is in a class of its own. You can taste the wood smoke without it ever overpowering the natural tenderness of the meat. Service was warm and wonderfully attentive."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-[#E8E0D0]">
+            <div class="w-10 h-10 rounded-full bg-[#FAF3E3] font-serif-title font-bold text-[#A67C00] flex items-center justify-center text-sm">
+              AS
+            </div>
+            <div>
+              <p class="text-xs font-bold text-[#141414]">Aditya Somani</p>
+              <p class="text-[11px] text-[#5C5A54]">Table 14 &bull; Anniversary Dinner</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-[#FDFBF7] border border-[#E8E0D0] p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-[#A67C00] mb-4">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <p class="font-serif-title text-base text-[#141414] italic leading-relaxed mb-6">
+              "The table QR order option is brilliantly executed. We were able to re-order cocktails and an extra bread basket without waving our hands across the dining floor. Seamless and polite."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-[#E8E0D0]">
+            <div class="w-10 h-10 rounded-full bg-[#FAF3E3] font-serif-title font-bold text-[#A67C00] flex items-center justify-center text-sm">
+              NP
+            </div>
+            <div>
+              <p class="text-xs font-bold text-[#141414]">Nandini Patel</p>
+              <p class="text-[11px] text-[#5C5A54]">Chef's Counter &bull; Weekend Tasting</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-[#FDFBF7] border border-[#E8E0D0] p-7 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-[#A67C00] mb-4">
+              &#9733;&#9733;&#9733;&#9733;&#9733;
+            </div>
+            <p class="font-serif-title text-base text-[#141414] italic leading-relaxed mb-6">
+              "The charred octopus and smoked chocolate tart blew our expectations away. Best Minders built an online demo that actually matches the sophistication of an upscale dining room."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-[#E8E0D0]">
+            <div class="w-10 h-10 rounded-full bg-[#FAF3E3] font-serif-title font-bold text-[#A67C00] flex items-center justify-center text-sm">
+              RV
+            </div>
+            <div>
+              <p class="text-xs font-bold text-[#141414]">Rohan Varma</p>
+              <p class="text-[11px] text-[#5C5A54]">Private Wine Room &bull; Corporate Gathering</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reservation & Event CTA Section -->
+  <section id="experience" class="py-20 lg:py-24 bg-[#111111] text-[#FDFBF7] relative">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+      <span class="inline-block text-xs font-bold uppercase tracking-[0.2em] text-[#A67C00]">TABLE RESERVATIONS &bull; DINNER ONLY</span>
+      <h2 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+        Reserve your evening at the <i class="text-[#A67C00] font-normal">Hearth</i>.
+      </h2>
+      <p class="text-sm sm:text-base text-neutral-300 max-w-xl mx-auto font-normal leading-relaxed">
+        We release seating slots 14 days in advance. For parties larger than 6 guests or exclusive dining room buyouts, contact our guest concierge directly.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+        <button onclick="openReservationModal()" class="h-[52px] px-8 rounded-xl bg-[#A67C00] hover:bg-[#8A6500] text-white font-semibold text-sm transition-all inline-flex items-center gap-2">
+          Open Online Reservation &rarr;
+        </button>
+        <a href="https://wa.me/918140557546?text=Hi%20EMBER%20Restaurant,%20I%20would%20like%20to%20reserve%20a%20private%20table%20for%20a%20special%20dinner." target="_blank" rel="noopener noreferrer" class="h-[52px] px-8 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-semibold text-sm transition-all inline-flex items-center gap-2">
+          Reserve via WhatsApp &rarr;
+        </a>
+      </div>
+
+      <div class="pt-8 text-xs text-neutral-400 flex items-center justify-center gap-6">
+        <span>&bull; Valet Parking Available</span>
+        <span>&bull; Smart Casual Attire</span>
+        <span>&bull; Corkage Policy on Request</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0D0D0D] text-[#A8A8A8] text-xs py-14 border-t border-[#222222]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <div class="space-y-3">
+        <span class="font-serif-title text-2xl font-bold text-white tracking-tight">EMBER</span>
+        <p class="text-xs text-neutral-400 leading-relaxed">
+          Artisanal wood-fired cuisine, aged cuts, and natural cellar pairings. Built as an interactive live restaurant website demo by Best Minders.
+        </p>
+        <p class="text-[11px] text-neutral-500">&copy; 2026 EMBER Restaurant. All rights reserved.</p>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-xs font-bold text-white uppercase tracking-wider">Service Hours</p>
+        <p class="text-neutral-400">Tuesday to Sunday: 6:30 PM &ndash; 11:30 PM</p>
+        <p class="text-neutral-400">Sunday Brunch: 12:00 PM &ndash; 3:30 PM</p>
+        <p class="text-amber-500 font-semibold">Mondays Closed for Hearth Maintenance</p>
+      </div>
+
+      <div class="space-y-2">
+        <p class="text-xs font-bold text-white uppercase tracking-wider">Location & Inquiries</p>
+        <p class="text-neutral-400">Hearth Pavilion, Old Civil Road</p>
+        <p class="text-neutral-400">Phone: +91 81405 57546</p>
+        <p class="text-neutral-400">Email: reservations@bestminders.com</p>
+      </div>
+
+      <div class="space-y-3">
+        <p class="text-xs font-bold text-white uppercase tracking-wider">Website Prototype</p>
+        <p class="text-neutral-400">Looking for a website like this for your luxury restaurant or lounge?</p>
+        <a href="https://bestminders.github.io/" class="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold">
+          Visit Best Minders Studio &rarr;
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Slide-Over Table Order Drawer (Simulator) -->
+  <div id="order-drawer" class="fixed inset-0 z-50 overflow-hidden hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/60 transition-opacity" onclick="toggleOrderDrawer()"></div>
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+      <div class="w-screen max-w-md bg-[#FDFBF7] border-l border-[#E8E0D0] shadow-2xl flex flex-col justify-between">
+        
+        <!-- Drawer Header -->
+        <div class="p-6 border-b border-[#E8E0D0] flex items-center justify-between bg-[#FFFFFF]">
+          <div>
+            <h3 class="font-serif-title text-xl font-bold text-[#141414]">Table Order Simulator</h3>
+            <p class="text-xs text-[#5C5A54] mt-0.5">Table 08 &bull; Guest Self-Ordering</p>
+          </div>
+          <button onclick="toggleOrderDrawer()" class="p-2 text-[#5C5A54] hover:text-[#141414] rounded-lg">
+            &times;
+          </button>
+        </div>
+
+        <!-- Drawer Items List -->
+        <div class="p-6 overflow-y-auto space-y-4 flex-1" id="order-items-list">
+          <div class="text-center py-12 text-[#5C5A54]">
+            <p class="text-sm font-semibold">Your table order tray is empty.</p>
+            <p class="text-xs mt-1">Select items from the Hearth Menu above to test the order simulator.</p>
+          </div>
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-6 border-t border-[#E8E0D0] bg-[#FFFFFF] space-y-4">
+          <div class="flex items-center justify-between text-sm font-semibold text-[#141414]">
+            <span>Estimated Subtotal:</span>
+            <span class="font-serif-title text-lg font-bold text-[#A67C00]" id="order-total">&#8377;0</span>
+          </div>
+          <button onclick="dispatchDemoOrder()" class="w-full btn-resto-primary !h-12 !text-xs font-bold">
+            Simulate Kitchen Dispatch &rarr;
+          </button>
+          <p class="text-[11px] text-center text-[#5C5A54]">
+            In production, this prints immediately to kitchen KDS & POS systems.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Modal -->
+  <div id="reservation-modal" class="fixed inset-0 z-50 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+      <div class="fixed inset-0 bg-black/60 transition-opacity" onclick="closeReservationModal()"></div>
+      <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+
+      <div class="inline-block align-bottom bg-[#FDFBF7] rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-[#E8E0D0]">
+        <div class="p-6 sm:p-8 bg-[#FFFFFF] border-b border-[#E8E0D0] flex items-center justify-between">
+          <div>
+            <span class="text-[11px] uppercase tracking-wider font-bold text-[#A67C00]">EMBER DINING</span>
+            <h3 class="font-serif-title text-2xl font-bold text-[#141414]">Reserve a Table</h3>
+          </div>
+          <button onclick="closeReservationModal()" class="text-2xl leading-none text-[#5C5A54] hover:text-[#141414]">&times;</button>
+        </div>
+
+        <form id="reservation-form" onsubmit="handleReservationSubmit(event)" class="p-6 sm:p-8 space-y-4">
+          <div>
+            <label class="block text-xs font-bold text-[#141414] mb-1">Guest Name</label>
+            <input type="text" id="res-name" required placeholder="e.g. Vikram Singhania" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#141414] mb-1">Date</label>
+              <input type="date" id="res-date" required class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#141414] mb-1">Time Slot</label>
+              <select id="res-time" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+                <option>6:30 PM (Opening)</option>
+                <option>7:30 PM (Dinner Prime)</option>
+                <option>8:30 PM (Dinner Prime)</option>
+                <option>9:30 PM (Late Seating)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-[#141414] mb-1">Party Size</label>
+              <select id="res-guests" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+                <option>2 Guests</option>
+                <option>4 Guests</option>
+                <option>6 Guests</option>
+                <option>8+ Guests (Private Area)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-[#141414] mb-1">Table Preference</label>
+              <select id="res-area" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+                <option>Main Hearth Room</option>
+                <option>Chef's Counter View</option>
+                <option>Candlelit Garden Patio</option>
+                <option>Wine Cellar Alcove</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-[#141414] mb-1">Dietary Notes / Occasion</label>
+            <input type="text" id="res-notes" placeholder="e.g. Birthday celebration, gluten-free" class="w-full px-3.5 py-2.5 rounded-xl border border-[#E8E0D0] bg-[#FFFFFF] text-sm text-[#141414] focus:outline-none focus:border-[#A67C00]">
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="w-full btn-resto-primary !h-12 !text-xs font-bold">
+              Confirm Reservation on WhatsApp &rarr;
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <aside aria-label="WhatsApp quick chat" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+    <div id="wa-bubble" class="bg-[#111111] text-[#FDFBF7] text-xs font-medium px-3.5 py-2 rounded-2xl shadow-xl border border-[#A67C00]/40 flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <span>Reserve a table via WhatsApp</span>
+      <button onclick="document.getElementById('wa-bubble').style.display='none'" class="text-neutral-400 hover:text-white text-sm ml-1">&times;</button>
+    </div>
+    <a 
+      href="https://wa.me/918140557546?text=Hi%20EMBER%20Restaurant,%20I%20would%20like%20to%20reserve%20a%20table%20at%20EMBER." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg hover:scale-105 transition-transform" 
+      aria-label="Direct WhatsApp Reservation"
+    >
+      <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.044c.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.159.57 4.186 1.564 5.942l-1.564 5.709 5.856-1.536c1.701.928 3.652 1.455 5.728 1.455 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+  </aside>
+
+  <!-- Interactive JavaScript Engine -->
+  <script>
+    // Tab Filtering
+    function filterCategory(cat) {
+      const tabs = ['hearth', 'starters', 'cuts', 'desserts', 'cellar'];
+      tabs.forEach(t => {
+        const btn = document.getElementById('tab-' + t);
+        if (btn) {
+          if (t === cat) {
+            btn.className = "px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#111111] text-white";
+          } else {
+            btn.className = "px-5 py-2.5 rounded-xl text-xs font-bold transition-all bg-[#F5EFE3] text-[#5C5A54] hover:bg-[#FFFFFF] border border-[#E8E0D0]";
+          }
+        }
+      });
+
+      const cards = document.querySelectorAll('#menu-grid .resto-card');
+      cards.forEach(card => {
+        if (card.getAttribute('data-category') === cat) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Interactive Order Simulation Cart
+    let orderCart = [];
+
+    function addToOrder(name, price) {
+      orderCart.push({ name, price });
+      updateCartDisplay();
+      // Optional brief open
+      toggleOrderDrawer(true);
+    }
+
+    function updateCartDisplay() {
+      const counter = document.getElementById('cart-counter');
+      const list = document.getElementById('order-items-list');
+      const totalEl = document.getElementById('order-total');
+      
+      counter.innerText = orderCart.length;
+
+      if (orderCart.length === 0) {
+        list.innerHTML = `
+          <div class="text-center py-12 text-[#5C5A54]">
+            <p class="text-sm font-semibold">Your table order tray is empty.</p>
+            <p class="text-xs mt-1">Select items from the Hearth Menu above to test the order simulator.</p>
+          </div>
+        `;
+        totalEl.innerText = "₹0";
+        return;
+      }
+
+      let html = '';
+      let sum = 0;
+      orderCart.forEach((item, index) => {
+        sum += item.price;
+        html += `
+          <div class="flex items-center justify-between p-3 rounded-xl bg-white border border-[#E8E0D0]">
+            <div>
+              <p class="text-xs font-bold text-[#141414]">${item.name}</p>
+              <p class="text-[11px] text-[#A67C00] font-semibold">₹${item.price.toLocaleString('en-IN')}</p>
+            </div>
+            <button onclick="removeOrderItem(${index})" class="text-xs text-red-500 hover:text-red-700 font-semibold px-2 py-1">
+              Remove
+            </button>
+          </div>
+        `;
+      });
+
+      list.innerHTML = html;
+      totalEl.innerText = "₹" + sum.toLocaleString('en-IN');
+    }
+
+    function removeOrderItem(index) {
+      orderCart.splice(index, 1);
+      updateCartDisplay();
+    }
+
+    function toggleOrderDrawer(forceOpen = false) {
+      const drawer = document.getElementById('order-drawer');
+      if (forceOpen) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.toggle('hidden');
+      }
+    }
+
+    function dispatchDemoOrder() {
+      if (orderCart.length === 0) {
+        alert("Please select at least one item from the menu to test the order simulator.");
+        return;
+      }
+      alert("Order sent to Kitchen Display Screen (KDS)! The chef has queued your items for Table 08.");
+      orderCart = [];
+      updateCartDisplay();
+      toggleOrderDrawer();
+    }
+
+    // Reservation Modal Logic
+    function openReservationModal() {
+      document.getElementById('reservation-modal').classList.remove('hidden');
+    }
+
+    function closeReservationModal() {
+      document.getElementById('reservation-modal').classList.add('hidden');
+    }
+
+    function handleReservationSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('res-name').value;
+      const date = document.getElementById('res-date').value;
+      const time = document.getElementById('res-time').value;
+      const guests = document.getElementById('res-guests').value;
+      const area = document.getElementById('res-area').value;
+      const notes = document.getElementById('res-notes').value || 'None';
+
+      const text = `Hi EMBER Restaurant, I would like to reserve a table.%0A%0A*Guest Name:* ${encodeURIComponent(name)}%0A*Date:* ${encodeURIComponent(date)}%0A*Time:* ${encodeURIComponent(time)}%0A*Party Size:* ${encodeURIComponent(guests)}%0A*Seating:* ${encodeURIComponent(area)}%0A*Special Notes:* ${encodeURIComponent(notes)}`;
+
+      window.open(`https://wa.me/918140557546?text=${text}`, '_blank');
+      closeReservationModal();
+    }
+  </script>
+
 </body>
 </html>
